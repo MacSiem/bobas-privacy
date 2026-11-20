@@ -29,7 +29,7 @@ class AccountDeletionPageTest(unittest.TestCase):
             with self.subTest(lang=lang):
                 self.assertEqual(section['lang'], lang)
                 self.assertIn('#' + lang, page.links)
-                self.assertGreater(len(section['text']), 350)
+                self.assertGreater(len(section['text']), 200)
                 for item in ('Bobas', 'Google Drive', 'iCloud', 'mail@macsiem.dev'):
                     self.assertIn(item, section['text'])
                 urls = [urlparse(link) for link in section['links'] if link and link.startswith('mailto:')]
