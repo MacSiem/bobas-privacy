@@ -26,10 +26,24 @@ class TermsTest(unittest.TestCase):
                 self.assertEqual(section['headings'], 8)
                 self.assertIn('mail@macsiem.dev', section['text'])
                 self.assertIn('LICENCEPRO POLSKA', section['text'])
+                self.assertIn('Maciej Siemiński', section['text'])
+                self.assertIn('Google Drive', section['text'])
+                self.assertIn('iCloud', section['text'])
                 self.assertIn('Unity Ads', section['text'])
                 self.assertIn('#' + code, parser.links)
                 self.assertGreater(len(section['text']), 600)
         self.assertIn('https://www.apple.com/legal/internet-services/itunes/dev/stdeula/', parser.links)
         self.assertNotIn('macsiem.dev@gmail.com', pathlib.Path('terms/index.html').read_text(encoding='utf-8'))
+
+    def test_privacy_and_terms_cross_links_and_backup_boundaries(self):
+        policy = Terms(); policy.feed(pathlib.Path('index.html').read_text(encoding='utf-8'))
+        terms = Terms(); terms.feed(pathlib.Path('terms/index.html').read_text(encoding='utf-8'))
+        self.assertIn('terms/', policy.links)
+        self.assertIn('../', terms.links)
+        for code in ('pl', 'en'):
+            text = policy.sections[code]['text']
+            for value in ('Maciej Siemiński', 'LICENCEPRO POLSKA', 'Google Drive', 'CloudKit', 'V1', 'V2', '30'):
+                with self.subTest(language=code, value=value): self.assertIn(value, text)
+            self.assertIn('#' + code, policy.links)
 
 if __name__ == '__main__': unittest.main()
