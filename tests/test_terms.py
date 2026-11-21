@@ -35,6 +35,13 @@ class TermsTest(unittest.TestCase):
         self.assertIn('https://www.apple.com/legal/internet-services/itunes/dev/stdeula/', parser.links)
         self.assertNotIn('macsiem.dev@gmail.com', pathlib.Path('terms/index.html').read_text(encoding='utf-8'))
 
+    def test_all_translations_distinguish_csv_json_and_premium_pdf(self):
+        parser = Terms(); parser.feed(pathlib.Path('terms/index.html').read_text(encoding='utf-8'))
+        for code, section in parser.sections.items():
+            with self.subTest(language=code):
+                for term in ('CSV', 'JSON', 'PDF', 'Premium'):
+                    self.assertIn(term, section['text'])
+
     def test_privacy_and_terms_cross_links_and_backup_boundaries(self):
         policy = Terms(); policy.feed(pathlib.Path('index.html').read_text(encoding='utf-8'))
         terms = Terms(); terms.feed(pathlib.Path('terms/index.html').read_text(encoding='utf-8'))
