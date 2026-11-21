@@ -37,11 +37,20 @@
 </head>
 <body>
 <div class="container">
-    <div class="lang-switcher">
-        <a href="#pl">Polski</a>
-        <a href="#en">English</a>
-        <a href="delete-account/">Usunięcie konta / Delete account</a>
-    </div>
+    <nav class="lang-switcher" aria-label="Język / Language">
+        <a href="#pl" lang="pl">Polski</a>
+        <a href="#en" lang="en">English</a>
+        <a href="#de" lang="de">Deutsch</a>
+        <a href="#es" lang="es">Español</a>
+        <a href="#fr" lang="fr">Français</a>
+        <a href="#it" lang="it">Italiano</a>
+        <a href="#pt" lang="pt">Português</a>
+        <a href="#uk" lang="uk">Українська</a>
+        <a href="#ja" lang="ja">日本語</a>
+        <a href="#ko" lang="ko">한국어</a>
+        <a href="#zh" lang="zh">简体中文</a>
+        <a href="delete-account/"><span lang="pl">Usunięcie konta</span> / <span lang="en">Delete account</span></a>
+    </nav>
 
     <section id="pl" lang="pl">
         <h1>Polityka prywatności - Bobas</h1>
@@ -173,6 +182,600 @@
 
         <h2>15. Contact</h2>
         <p>Privacy and support contact: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+    </section>
+
+    <section id="de" lang="de">
+        <h1>Datenschutzerklärung – Bobas</h1>
+        <p><strong>Zuletzt aktualisiert: 2026-11-20</strong></p>
+
+        <h2>1. Verantwortliche für die Datenverarbeitung</h2>
+        <p>Für die Version für iOS / App Store ist <strong>Maciej Siemiński</strong> verantwortlich. Kontakt: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+        <p>Für die Version für Google Play (Android) ist <strong>LICENCEPRO POLSKA Sp. z o.o.</strong>, ul. Huculska 6, 00-730 Warszawa, Polen, verantwortlich. Kontakt: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+
+        <h2>2. Was Bobas bietet</h2>
+        <p>Bobas hilft Eltern und Betreuungspersonen, die tägliche Pflege eines Säuglings zu organisieren: Füttern, Schlaf, Windeln, Wachstum, Medikamente, Temperatur, Zahnen, Baden, Notizen, Verlauf, Trends, Erinnerungen und Exporte. Die App dient Eltern zur Organisation und ist kein Diagnosewerkzeug. Sie richtet sich an Erwachsene.</p>
+
+        <h2>3. Lokal auf dem Gerät gespeicherte Daten</h2>
+        <p>Von Eltern eingegebene Daten werden lokal in der App gespeichert. Dazu gehören insbesondere:</p>
+        <ul>
+            <li>Kinderprofile: Name oder Spitzname, Geburtsdatum, Geschlecht, Geburtsgewicht und -länge, Ernährungsart sowie optionale Beobachtungen.</li>
+            <li>Elternprofil, Erinnerungseinstellungen und App-Präferenzen.</li>
+            <li>Einträge im Pflegetagebuch: Füttern, Abpumpen, Essen, Schlaf, Windeln, Wachstum, Medikamente, Zahnen, Baden, Temperatur und Notizen.</li>
+            <li>Datumsangaben, Tags, Mengen, Einheiten, Notizen, Verlauf, Trends, Einstellungen, Stand der Ersteinrichtung und lokaler Premium-Status.</li>
+        </ul>
+        <p>Die lokale Hauptdatenbank verwendet verschlüsseltes MMKV. Der Verschlüsselungsschlüssel wird in SecureStore / Keychain / Android Keystore des Systems gespeichert, sofern verfügbar.</p>
+
+        <h2>4. Sicherung, Konto und Export</h2>
+        <p>Pflegedaten werden lokal gespeichert. Sie können eine JSON-Sicherung erstellen, ausgewählte Einträge aus CSV importieren, einen PDF-Bericht erstellen (Premium-Funktion), auf Wunsch Geräte koppeln und das Tagebuch mit einer weiteren Betreuungsperson synchronisieren oder die Anmeldung und Cloud-Sicherung nutzen. Bei der Synchronisierung werden verschlüsselte Daten über die Infrastruktur von Cloudflare übertragen. Die gekoppelten Geräte besitzen den Schlüssel zum Lesen der Daten. Die andere Betreuungsperson kann eine eigene Kopie behalten.</p>
+        <p>Neue Nutzende können ohne zusätzliche Kosten durch Bobas eine Sicherung in ihrem privaten Google Drive oder unter iOS in iCloud (CloudKit) wählen. Die Verfügbarkeit und etwaige Speicherkosten hängen vom Anbieter ab. Die Sicherung wird auf dem Gerät verschlüsselt, ihr Schlüssel wird jedoch im selben privaten Speicher abgelegt. Der Anbieter kann technisch auf den Inhalt zugreifen. Diese Sicherung ist vom Bobas-Server getrennt. JSON-Exporte und PDF-Berichte sind lesbare Dateien, die mit den von Ihnen ausgewählten Empfängern geteilt werden.</p>
+        <p>Bestehende Sicherungen auf dem Bobas-Server umfassen die älteren Versionen V1 und V2, die aus Kompatibilitätsgründen verfügbar sind. Schützen Sie bei einer bestehenden Sicherung deren Wiederherstellungsphrase. Bei der Anmeldung kann die App ein Apple- oder Google-Identitätstoken an das Backend senden und Nutzer-ID, Sitzungstoken, Ablaufzeitpunkt, Anbieter und eine gegebenenfalls zurückgegebene E-Mail- oder Apple Private Relay-Adresse speichern.</p>
+
+        <h2>5. Benachrichtigungen</h2>
+        <p>Die App verwendet lokale Benachrichtigungen für Pflegeerinnerungen. Mit Ihrer Benachrichtigungsberechtigung registriert die App bei einem Cloudflare Worker ein Expo Push-Token, eine pseudonyme Installations-ID, Plattform, Sprache, App-Version, Vertriebskanal, Build-Nummer, ausgewählte Kategorien und Premium-Status, um optionale Mitteilungen zuzustellen. An der Zustellung können Expo sowie APNs oder Firebase Cloud Messaging beteiligt sein. Nach dem Widerruf der Berechtigung wird die Token-Registrierung beim nächsten Start oder bei der nächsten Rückkehr zur App mit Netzverbindung entfernt. Unabhängig von der Berechtigung sendet die App eine pseudonyme Installations-ID, Plattform, Version, Build-Nummer und Vertriebskanal, um zu messen, welche App-Versionen genutzt werden.</p>
+
+        <h2>6. Absturzdiagnose</h2>
+        <p>Die App nutzt Sentry zur Diagnose von Fehlern und Abstürzen. Berichte können technische Angaben zu Absturz, Gerät, Betriebssystem und App-Version sowie einen Stacktrace enthalten. Die App enthält Schutzmaßnahmen gegen die Übermittlung von Familieninhalten und Nutzerkennungen in Diagnoseberichten.</p>
+
+        <h2>7. Werbung</h2>
+        <p>Bobas enthält Unity Ads und kann in der kostenlosen Version Werbebanner anzeigen, etwa in den Einstellungen und in der Verlaufsübersicht. Die App ist für erwachsene Eltern und Betreuungspersonen bestimmt und wird weder als Kinder-App noch als an Kinder gerichteter Dienst eingereicht. Unter Android deklariert die App die Berechtigung AD_ID. Unter iOS kann sie die von der Plattform verlangte ATT-Systemabfrage anzeigen. Eine Ablehnung blockiert die App nicht.</p>
+
+        <h2>8. In-App-Käufe</h2>
+        <p>Käufe, Abonnements und das Wiederherstellen von Käufen werden über den Apple App Store oder Google Play abgewickelt. Wir erhalten keine vollständigen Zahlungskartendaten. Die App kann den Premium-Status, die Art der Berechtigung und das Ablaufdatum lokal speichern.</p>
+
+        <h2>9. Daten von Kindern</h2>
+        <p>Bobas richtet sich an Eltern und Betreuungspersonen. Kindbezogene Daten werden von Erwachsenen eingegeben und verbleiben auf dem Gerät, sofern Sie nicht bewusst einen Export, die Familiensynchronisierung oder eine Sicherung nutzen. Wir verkaufen keine Daten von Kindern, erstellen keine Kinderkonten und veröffentlichen solche Daten nicht auf öffentlichen Profilen in sozialen Netzwerken.</p>
+
+        <h2>10. Datenverarbeitung durch Dritte</h2>
+        <p>Für App-Funktionen erforderliche Dienstleister können Daten verarbeiten: Apple und Google für Anmeldung, Käufe und App-Stores, Unity Ads für Werbung, Sentry für Absturzdiagnose, Cloudflare für App-Infrastruktur, Apple und Google für die ausgewählte private Sicherung sowie Expo, APNs und Firebase Cloud Messaging für optionale Benachrichtigungen. Bei Nutzung dieser Funktionen verarbeitet das Backend Sitzungsdaten, verschlüsselte Synchronisierungsdaten und verschlüsselte Sicherungsdaten im erforderlichen Umfang.</p>
+
+        <h2>11. Rechtsgrundlagen (DSGVO)</h2>
+        <p>Soweit die DSGVO anwendbar ist, verarbeiten wir Daten auf folgenden Grundlagen:</p>
+        <ul>
+            <li><strong>Art. 6 Abs. 1 Buchst. b DSGVO (Vertragserfüllung)</strong> – Bereitstellung der App-Funktionen, einschließlich lokaler Daten, Pflegetagebuch, Export, Konto und Sicherung (wenn aktiviert) sowie Käufen.</li>
+            <li><strong>Art. 6 Abs. 1 Buchst. a DSGVO (Einwilligung)</strong> – optionale Funktionen, die eine Einwilligung oder Systemberechtigung erfordern, etwa Benachrichtigungen. Die Einwilligung kann jederzeit in den Systemeinstellungen widerrufen werden.</li>
+            <li><strong>Art. 6 Abs. 1 Buchst. f DSGVO (berechtigtes Interesse)</strong> – Absturzdiagnose (Sentry) zur Stabilität der App und Anzeige nicht personalisierter Werbung zur Finanzierung der kostenlosen Version.</li>
+        </ul>
+
+        <h2>12. Speicherdauer</h2>
+        <p>Lokale Daten bleiben auf dem Gerät, bis sie in der App gelöscht werden oder die App deinstalliert wird. Speicherung und Löschung im privaten Drive oder in iCloud hängen von Konto, Sicherungsfunktion und Vorgaben des Anbieters ab. Beim Löschen eines Bobas-Kontos werden diese Kopien nicht automatisch gelöscht. Auf dem Bobas-Server kann eine ältere V1-Sicherung aus Kompatibilitätsgründen neben V2 bestehen. V2 behält die letzte verifizierte vollständige Sicherungsgeneration. Nach Verifizierung einer neuen wird die ältere gelöscht. Bei Fehlern oder ausstehender Verifizierung kann sie bis zur erfolgreichen Bereinigung erhalten bleiben. Unvollständige Uploads laufen ab und werden bereinigt. Bei Fehlern wird der Vorgang wiederholt. Kontodaten und Serversicherungen werden nach erfolgreicher Kontolöschung oder Erfüllung einer Löschanfrage gelöscht. Eine fehlgeschlagene Löschung muss erneut versucht werden. Verschlüsselte Fotos im Zwischenspeicher für die Familiensynchronisierung sind nach 30 Tagen nicht mehr zugänglich. Die Löschung ist eingeplant und wird bei Fehlern wiederholt, sodass die physische Löschung später erfolgen kann. Kopien auf den Geräten der Betreuungspersonen bleiben davon getrennt. Ein Widerruf der Benachrichtigungsberechtigung entfernt die Push-Registrierung beim nächsten Kontakt der App mit dem Worker. Inaktive Registrierungen laufen gemäß den Diensteinstellungen ab. Die Speicherdauer von Absturzberichten hängt von der Sentry-Konfiguration ab, die der Werbedaten von den Richtlinien von Unity Ads.</p>
+
+        <h2>13. Übermittlungen außerhalb des EWR</h2>
+        <p>Die in Abschnitt 10 genannten Anbieter (darunter Apple, Google, Cloudflare, Sentry und Expo) können technische Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten. Solche Übermittlungen stützen sich auf die gemäß DSGVO erforderlichen Garantien, etwa die Standardvertragsklauseln der Europäischen Kommission oder einen Angemessenheitsbeschluss (einschließlich des EU–US Data Privacy Framework, soweit anwendbar). Cloud-Sicherungen werden vor der Übermittlung auf dem Gerät verschlüsselt. Schlüsselverwahrung und Anbieterzugriff hängen von der gewählten Sicherungsart ab.</p>
+
+        <h2>14. Löschung und Ihre Rechte</h2>
+        <p><strong><a href="delete-account/#de">Beantragen Sie die Löschung Ihres Bobas-Kontos</a></strong> – ohne Anmeldung.</p>
+        <p>Sie können lokale Daten über die App-Funktionen oder durch Deinstallation der App löschen. Eine Abmeldung entfernt die lokale Kontositzung. Wurde ein Konto oder eine Sicherung im Backend angelegt, können Sie per E-Mail an <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> die Löschung beantragen. Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit sowie das Recht, einer auf berechtigtem Interesse beruhenden Verarbeitung zu widersprechen. Sie haben außerdem das Recht, bei einer Aufsichtsbehörde Beschwerde einzulegen. In Polen ist dies der Präsident des Amts für den Schutz personenbezogener Daten (UODO), ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl/">uodo.gov.pl</a>.</p>
+
+        <h2>15. Kontakt</h2>
+        <p>Für Datenschutzfragen und Support: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+    </section>
+
+    <section id="es" lang="es">
+        <h1>Política de privacidad de Bobas</h1>
+        <p><strong>Última actualización: 2026-11-20</strong></p>
+
+        <h2>1. Responsable del tratamiento</h2>
+        <p>Para la versión de iOS / App Store, el responsable del tratamiento es <strong>Maciej Siemiński</strong>. Contacto: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+        <p>Para la versión de Google Play (Android), el responsable del tratamiento es <strong>LICENCEPRO POLSKA Sp. z o.o.</strong>, ul. Huculska 6, 00-730 Varsovia, Polonia. Contacto: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+
+        <h2>2. Qué es Bobas</h2>
+        <p>Bobas es una aplicación para que padres, madres y cuidadores organicen los cuidados cotidianos de un bebé: alimentación, sueño, pañales, crecimiento, medicación, temperatura, dentición, baños, notas, historial, tendencias, recordatorios y exportaciones. Sirve para organizar los cuidados y no es una herramienta de diagnóstico. Está dirigida a personas adultas.</p>
+
+        <h2>3. Datos almacenados localmente en el dispositivo</h2>
+        <p>Los datos que introduce el progenitor se guardan localmente en la aplicación. Entre ellos se incluyen:</p>
+        <ul>
+            <li>Perfiles infantiles: nombre o apodo, fecha de nacimiento, sexo, peso y longitud al nacer, tipo de alimentación y observaciones opcionales.</li>
+            <li>Perfil del progenitor, ajustes de los recordatorios y preferencias de la aplicación.</li>
+            <li>Entradas del diario de cuidados: tomas, extracción de leche, comidas, sueño, pañales, crecimiento, medicación, dentición, baños, temperatura y notas.</li>
+            <li>Fechas, etiquetas, cantidades, unidades, notas, historial, tendencias, ajustes, estado de la configuración inicial y estado local de Premium.</li>
+        </ul>
+        <p>La base de datos local principal utiliza MMKV cifrado. La clave de cifrado se guarda en SecureStore / Keychain / Android Keystore del sistema cuando está disponible.</p>
+
+        <h2>4. Copias de seguridad, cuenta y exportación</h2>
+        <p>Los datos de cuidados se guardan localmente. Puedes crear una copia JSON, importar entradas seleccionadas desde un CSV y generar un informe PDF (función Premium), vincular dispositivos de forma opcional y sincronizar el diario con otro cuidador, o utilizar el inicio de sesión y la copia en la nube. La sincronización transmite datos cifrados a través de la infraestructura de Cloudflare. Los dispositivos vinculados tienen la clave para leerlos. El otro cuidador puede conservar una copia propia.</p>
+        <p>Las personas que empiezan a usar Bobas pueden elegir una copia en su almacenamiento privado de Google Drive o, en iOS, iCloud (CloudKit) sin cargos adicionales de Bobas. La disponibilidad y los posibles costes de almacenamiento dependen del proveedor. La copia se cifra en el dispositivo, pero la clave se guarda en el mismo almacenamiento privado. El proveedor puede acceder técnicamente al contenido. Esta copia está separada del servidor de Bobas. Las exportaciones JSON y los informes PDF son archivos legibles que se comparten con el destinatario que elijas.</p>
+        <p>Las copias existentes en el servidor de Bobas incluyen las versiones anteriores V1 y V2, disponibles por compatibilidad. Si tienes una copia anterior, protege su frase de recuperación. Si inicias sesión, la aplicación puede enviar al backend un token de identidad de Apple o Google y guardar el identificador de usuario, el token de sesión, la fecha de caducidad, el proveedor y la dirección de correo electrónico o de Apple Private Relay que se reciba.</p>
+
+        <h2>5. Notificaciones</h2>
+        <p>La aplicación utiliza notificaciones locales para los recordatorios de cuidados. Cuando concedes el permiso de notificaciones, registra en un Cloudflare Worker un token de Expo Push, un identificador seudónimo de instalación, la plataforma, el idioma, la versión de la aplicación, el canal de distribución, el número de compilación, las categorías seleccionadas y el estado de Premium para enviar avisos opcionales. La entrega puede implicar a Expo y a APNs o Firebase Cloud Messaging. Al revocar el permiso, se elimina el registro del token la próxima vez que abras la aplicación o vuelvas a ella con conexión a la red. Con independencia del permiso, la aplicación envía un identificador seudónimo de instalación, la plataforma, la versión, el número de compilación y el canal de distribución para medir qué versiones se utilizan.</p>
+
+        <h2>6. Diagnóstico de fallos</h2>
+        <p>La aplicación tiene configurado Sentry para diagnosticar errores y fallos. Los informes pueden incluir información técnica sobre el fallo, el dispositivo, el sistema operativo, la versión de la aplicación y la traza de la pila. El código incluye medidas para evitar que se envíen contenidos familiares e identificadores de usuario en los informes de diagnóstico.</p>
+
+        <h2>7. Publicidad</h2>
+        <p>Bobas incorpora Unity Ads y puede mostrar banners publicitarios en la versión gratuita, por ejemplo en los ajustes y en el resumen del historial. La aplicación está destinada a padres, madres y cuidadores adultos. No se presenta como aplicación infantil ni como servicio dirigido a menores. En Android declara el permiso AD_ID y, en iOS, puede mostrar el aviso del sistema para solicitar el permiso ATT exigido por la plataforma. Rechazar el permiso no impide usar la aplicación.</p>
+
+        <h2>8. Compras en la aplicación</h2>
+        <p>Las compras, suscripciones y restauraciones de compras se gestionan a través de Apple App Store o Google Play. No recibimos los datos completos de la tarjeta de pago. La aplicación puede guardar localmente el estado de Premium, el tipo de derecho y la fecha de caducidad.</p>
+
+        <h2>9. Datos de menores</h2>
+        <p>Bobas se dirige a padres, madres y cuidadores. Una persona adulta introduce los datos de los menores, que permanecen en el dispositivo salvo que se utilice deliberadamente la exportación, la sincronización familiar o la copia de seguridad. No vendemos datos de menores, no creamos cuentas para menores ni publicamos sus datos en perfiles públicos de redes sociales.</p>
+
+        <h2>10. Tratamiento por terceros</h2>
+        <p>Pueden tratar datos los proveedores necesarios para las funciones de la aplicación: Apple y Google para el inicio de sesión, las compras y las tiendas, Unity Ads para la publicidad, Sentry para el diagnóstico de fallos, Cloudflare para la infraestructura, Apple y Google para la copia privada seleccionada y Expo, APNs y Firebase Cloud Messaging para las notificaciones opcionales. Al utilizar estas funciones, el backend trata los datos de sesión, los datos cifrados de sincronización y las copias cifradas en la medida necesaria para prestarlas.</p>
+
+        <h2>11. Bases jurídicas del tratamiento (RGPD)</h2>
+        <p>Cuando se aplica el RGPD, tratamos los datos sobre las siguientes bases jurídicas:</p>
+        <ul>
+            <li><strong>Art. 6, apdo. 1, letra b, del RGPD (ejecución del contrato)</strong> – funcionamiento de las funciones de la aplicación, incluidos los datos locales, el diario de cuidados, la exportación, la cuenta y la copia de seguridad (si están activadas) y las compras.</li>
+            <li><strong>Art. 6, apdo. 1, letra a, del RGPD (consentimiento)</strong> – funciones opcionales que requieren el consentimiento o un permiso del sistema, como las notificaciones. Puedes retirar el consentimiento en los ajustes del sistema en cualquier momento.</li>
+            <li><strong>Art. 6, apdo. 1, letra f, del RGPD (interés legítimo)</strong> – diagnóstico de fallos (Sentry) para mantener la estabilidad de la aplicación y publicación de anuncios no personalizados para financiar la versión gratuita.</li>
+        </ul>
+
+        <h2>12. Plazos de conservación</h2>
+        <p>Los datos locales permanecen en el dispositivo hasta que se eliminan en la aplicación o esta se desinstala. La conservación y eliminación en un Drive o iCloud privado dependen de la cuenta, la función de copia y las reglas del proveedor. Eliminar una cuenta de Bobas no elimina automáticamente esas copias. En el servidor de Bobas, una copia antigua V1 puede coexistir con V2 por compatibilidad. V2 conserva la última generación completa verificada. Cuando se verifica una nueva, se elimina la anterior. Si se produce un error o falta la verificación, la anterior puede permanecer hasta que se complete la limpieza. Las cargas incompletas caducan y se eliminan, con reintentos en caso de error. Los datos de la cuenta y las copias en el servidor se eliminan al completarse la eliminación de la cuenta o la tramitación de una solicitud de supresión. Si falla la eliminación, debe reintentarse. Las fotos cifradas del almacenamiento temporal para la sincronización familiar dejan de ser accesibles a los 30 días. Se programa su eliminación y se reintenta si falla, por lo que la eliminación física puede ocurrir más tarde. Las copias en los dispositivos de los cuidadores son independientes. Si revocas el permiso de notificaciones, el registro push se elimina la próxima vez que la aplicación se comunica con el Worker. Los registros inactivos caducan según los ajustes del servicio. La conservación de los informes de fallos depende de la configuración de Sentry y la de los datos publicitarios de las políticas de Unity Ads.</p>
+
+        <h2>13. Transferencias fuera del EEE</h2>
+        <p>Los proveedores enumerados en la sección 10 (entre ellos Apple, Google, Cloudflare, Sentry y Expo) pueden tratar datos técnicos fuera del Espacio Económico Europeo. Estas transferencias se basan en las garantías exigidas por el RGPD, por ejemplo las cláusulas contractuales tipo de la Comisión Europea o una decisión de adecuación (incluido el Marco de Privacidad de Datos UE–EE. UU., cuando proceda). Las copias en la nube se cifran en el dispositivo antes de enviarse. La custodia de la clave y el acceso del proveedor dependen del método de copia elegido.</p>
+
+        <h2>14. Supresión y derechos de las personas usuarias</h2>
+        <p><strong><a href="delete-account/#es">Solicita la eliminación de tu cuenta de Bobas</a></strong> sin iniciar sesión.</p>
+        <p>Puedes eliminar los datos locales mediante las funciones de la aplicación o desinstalándola. Cerrar sesión elimina la sesión local de la cuenta. Si se creó una cuenta o una copia en el backend, puedes solicitar su supresión escribiendo a <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. Tienes derecho al acceso, la rectificación, la supresión, la limitación del tratamiento y la portabilidad, así como a oponerte al tratamiento basado en un interés legítimo. También tienes derecho a presentar una reclamación ante una autoridad de control. En Polonia es la persona titular de la Presidencia de la Oficina de Protección de Datos Personales (UODO), ul. Stawki 2, 00-193 Varsovia, <a href="https://uodo.gov.pl/">uodo.gov.pl</a>.</p>
+
+        <h2>15. Contacto</h2>
+        <p>Privacidad y asistencia: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+    </section>
+
+    <section id="fr" lang="fr">
+        <h1>Politique de confidentialité de Bobas</h1>
+        <p><strong>Dernière mise à jour: 2026-11-20</strong></p>
+
+        <h2>1. Responsable du traitement</h2>
+        <p>Pour la version iOS / App Store, le responsable du traitement est <strong>Maciej Siemiński</strong>. Contact : <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+        <p>Pour la version Google Play (Android), le responsable du traitement est <strong>LICENCEPRO POLSKA Sp. z o.o.</strong>, ul. Huculska 6, 00-730 Varsovie, Pologne. Contact : <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+
+        <h2>2. Présentation de Bobas</h2>
+        <p>Bobas aide les parents et les personnes qui s’occupent d’un nourrisson à organiser ses soins quotidiens : alimentation, sommeil, couches, croissance, médicaments, température, poussées dentaires, bains, notes, historique, tendances, rappels et exports. L’application sert à organiser le suivi et ne constitue pas un outil de diagnostic. Elle s’adresse aux adultes.</p>
+
+        <h2>3. Données enregistrées localement sur l’appareil</h2>
+        <p>Les données saisies par un parent sont enregistrées localement dans l’application. Il s’agit notamment des éléments suivants :</p>
+        <ul>
+            <li>Profils des enfants : prénom ou pseudonyme, date de naissance, sexe, poids et taille à la naissance, mode d’alimentation et observations facultatives.</li>
+            <li>Profil du parent, paramètres de rappel et préférences de l’application.</li>
+            <li>Entrées du journal de soins : alimentation, tirage du lait, repas, sommeil, couches, croissance, médicaments, poussées dentaires, bains, température et notes.</li>
+            <li>Dates, étiquettes, quantités, unités, notes, historique, tendances, paramètres, état de la configuration initiale et statut Premium local.</li>
+        </ul>
+        <p>La base de données locale principale utilise MMKV chiffré. La clé de chiffrement est conservée dans le stockage système SecureStore / Keychain / Android Keystore lorsqu’il est disponible.</p>
+
+        <h2>4. Sauvegarde, compte et export</h2>
+        <p>Les données de soins sont enregistrées localement. Vous pouvez créer une sauvegarde JSON, importer certaines entrées depuis un fichier CSV et générer un rapport PDF (fonctionnalité Premium), jumeler des appareils et synchroniser le journal avec une autre personne qui s’occupe de l’enfant, ou utiliser la connexion et la sauvegarde dans le cloud. Le jumelage est facultatif. Les données synchronisées circulent sous forme chiffrée via l’infrastructure de Cloudflare. Les appareils jumelés possèdent la clé permettant de les lire. L’autre personne peut conserver sa propre copie.</p>
+        <p>Les nouveaux utilisateurs peuvent choisir une sauvegarde dans leur espace privé Google Drive ou, sur iOS, iCloud (CloudKit), sans frais supplémentaires facturés par Bobas. La disponibilité et les éventuels frais de stockage dépendent du fournisseur. La sauvegarde est chiffrée sur l’appareil, mais la clé est conservée dans le même espace privé. Le fournisseur peut techniquement accéder au contenu. Cette sauvegarde est distincte du serveur Bobas. Les exports JSON et rapports PDF sont des fichiers lisibles partagés avec le destinataire choisi.</p>
+        <p>Les sauvegardes existantes sur le serveur Bobas incluent les anciennes versions V1 et V2, disponibles pour des raisons de compatibilité. Si vous utilisez une sauvegarde existante, protégez sa phrase de récupération. Lors de la connexion, l’application peut envoyer au serveur un jeton d’identité Apple ou Google et enregistrer l’identifiant utilisateur, le jeton de session, sa date d’expiration, le fournisseur et l’adresse e-mail ou Apple Private Relay éventuellement renvoyée.</p>
+
+        <h2>5. Notifications</h2>
+        <p>L’application utilise les notifications locales pour les rappels de soins. Lorsque vous autorisez les notifications, elle enregistre auprès d’un Cloudflare Worker un jeton Expo Push, un identifiant d’installation pseudonyme, la plateforme, la langue, la version de l’application, le canal de distribution, le numéro de build, les catégories sélectionnées et le statut Premium pour diffuser des annonces facultatives. La distribution peut faire intervenir Expo ainsi qu’APNs ou Firebase Cloud Messaging. Si vous retirez l’autorisation, le jeton est désenregistré au prochain démarrage ou à la prochaine réouverture de l’application avec une connexion réseau. Même sans cette autorisation, l’application envoie un identifiant d’installation pseudonyme, la plateforme, la version, le numéro de build et le canal de distribution pour mesurer quelles versions sont utilisées.</p>
+
+        <h2>6. Diagnostic des plantages</h2>
+        <p>Sentry est configuré dans l’application pour diagnostiquer les erreurs et les plantages. Un rapport peut inclure des informations techniques sur le plantage, l’appareil, le système d’exploitation, la version de l’application et la trace de la pile d’appels. Le code contient des protections contre l’envoi de contenus familiaux et d’identifiants utilisateur dans les rapports de diagnostic.</p>
+
+        <h2>7. Publicité</h2>
+        <p>Bobas intègre Unity Ads et peut afficher des bannières dans sa version gratuite, notamment dans les paramètres et le récapitulatif de l’historique. L’application s’adresse aux parents et aux personnes responsables de l’enfant qui sont adultes. Elle n’est déclarée ni comme application destinée aux enfants ni comme service à leur intention. Sur Android, elle déclare l’autorisation AD_ID. Sur iOS, elle peut afficher la demande système d’autorisation ATT exigée par la plateforme. Le refus ne bloque pas l’application.</p>
+
+        <h2>8. Achats intégrés</h2>
+        <p>Les achats, les abonnements et la restauration des achats sont gérés par l’App Store d’Apple ou Google Play. Nous ne recevons pas les coordonnées complètes de votre carte de paiement. L’application peut stocker localement le statut Premium, le type de droit d’accès et la date d’expiration.</p>
+
+        <h2>9. Données relatives aux enfants</h2>
+        <p>Bobas est destiné aux parents et aux personnes qui s’occupent de l’enfant. Les données relatives à un enfant sont saisies par un adulte et restent sur l’appareil, sauf si vous choisissez d’utiliser l’export, la synchronisation familiale ou la sauvegarde. Nous ne vendons pas les données des enfants, ne créons pas de comptes pour eux et ne publions pas leurs données sur des profils publics de réseaux sociaux.</p>
+
+        <h2>10. Traitement par des tiers</h2>
+        <p>Des fournisseurs nécessaires aux fonctionnalités de l’application peuvent traiter des données : Apple et Google pour la connexion, les achats et les boutiques, Unity Ads pour la publicité, Sentry pour les diagnostics de plantage, Cloudflare pour l’infrastructure, Apple et Google pour la sauvegarde privée choisie, et Expo, APNs et Firebase Cloud Messaging pour les notifications facultatives. Lorsque ces fonctionnalités sont utilisées, le serveur traite les données de session, les données de synchronisation chiffrées et les données de sauvegarde chiffrées dans la mesure nécessaire à leur fonctionnement.</p>
+
+        <h2>11. Bases juridiques du traitement (RGPD)</h2>
+        <p>Lorsque le RGPD s’applique, les données sont traitées sur les bases suivantes :</p>
+        <ul>
+            <li><strong>Art. 6, par. 1, point b), du RGPD (exécution du contrat)</strong> – fonctionnement de l’application, y compris les données locales, le journal de soins, l’export, le compte et la sauvegarde (si activés) ainsi que les achats.</li>
+            <li><strong>Art. 6, par. 1, point a), du RGPD (consentement)</strong> – fonctionnalités facultatives exigeant un consentement ou une autorisation système, comme les notifications. Le consentement peut être retiré à tout moment dans les paramètres système.</li>
+            <li><strong>Art. 6, par. 1, point f), du RGPD (intérêt légitime)</strong> – diagnostic des plantages (Sentry) pour maintenir la stabilité de l’application et diffusion d’annonces non personnalisées pour financer la version gratuite.</li>
+        </ul>
+
+        <h2>12. Durées de conservation</h2>
+        <p>Les données locales restent sur l’appareil jusqu’à leur suppression dans l’application ou à la désinstallation de celle-ci. La conservation et la suppression dans l’espace privé Drive ou iCloud dépendent du compte, de la fonction de sauvegarde et des règles du fournisseur. La suppression d’un compte Bobas n’efface pas automatiquement ces copies. Sur le serveur Bobas, une ancienne sauvegarde V1 peut coexister avec V2 pour des raisons de compatibilité. V2 conserve la dernière génération complète et vérifiée. Dès qu’une nouvelle génération est vérifiée, l’ancienne est supprimée. En cas d’erreur ou de vérification manquante, elle peut rester jusqu’à ce que le nettoyage aboutisse. Les transferts incomplets expirent et sont nettoyés, avec de nouvelles tentatives en cas d’erreur. Les données du compte et les sauvegardes serveur sont supprimées après la suppression effective du compte ou l’exécution d’une demande d’effacement. En cas d’échec, la suppression doit être retentée. Les photos chiffrées conservées dans le stockage de transit de la synchronisation familiale deviennent inaccessibles au bout de 30 jours. Leur suppression est planifiée et réessayée en cas d’erreur, de sorte que la suppression physique peut intervenir plus tard. Les copies présentes sur les appareils des personnes qui s’occupent de l’enfant restent distinctes. La révocation de l’autorisation de notification entraîne la suppression de l’enregistrement push au prochain contact de l’application avec le Worker. Les enregistrements inactifs expirent selon les paramètres du service. La durée de conservation des rapports de plantage dépend de la configuration Sentry, et celle des données publicitaires dépend de la politique de Unity Ads.</p>
+
+        <h2>13. Transferts hors de l’EEE</h2>
+        <p>Les fournisseurs cités à la section 10, notamment Apple, Google, Cloudflare, Sentry et Expo, peuvent traiter des données techniques hors de l’Espace économique européen. Ces transferts s’appuient sur les garanties requises par le RGPD, comme les clauses contractuelles types de la Commission européenne ou une décision d’adéquation, y compris le cadre de protection des données UE–États-Unis le cas échéant. Les sauvegardes dans le cloud sont chiffrées sur l’appareil avant l’envoi. La conservation des clés et l’accès du fournisseur varient selon le mode de sauvegarde choisi.</p>
+
+        <h2>14. Suppression et droits des utilisateurs</h2>
+        <p><strong><a href="delete-account/#fr">Demander la suppression de votre compte Bobas</a></strong> sans vous connecter.</p>
+        <p>Vous pouvez effacer les données locales dans l’application ou en désinstallant celle-ci. La déconnexion supprime la session locale du compte. Si un compte ou une sauvegarde a été créé sur le serveur, vous pouvez demander l’effacement des données en écrivant à <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. Vous disposez des droits d’accès, de rectification, d’effacement, de limitation du traitement et de portabilité ainsi que du droit de vous opposer au traitement fondé sur un intérêt légitime. Vous pouvez également déposer une réclamation auprès d’une autorité de contrôle. En Pologne, il s’agit du président de l’Office de protection des données personnelles (UODO), ul. Stawki 2, 00-193 Varsovie, <a href="https://uodo.gov.pl/">uodo.gov.pl</a>.</p>
+
+        <h2>15. Contact</h2>
+        <p>Protection des données et assistance : <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+    </section>
+
+    <section id="it" lang="it">
+        <h1>Informativa sulla privacy di Bobas</h1>
+        <p><strong>Ultimo aggiornamento: 2026-11-20</strong></p>
+
+        <h2>1. Titolare del trattamento</h2>
+        <p>Per la versione iOS / App Store, il titolare del trattamento è <strong>Maciej Siemiński</strong>. Contatto: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+        <p>Per la versione Google Play (Android), il titolare del trattamento è <strong>LICENCEPRO POLSKA Sp. z o.o.</strong>, ul. Huculska 6, 00-730 Varsavia, Polonia. Contatto: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+
+        <h2>2. Che cos’è Bobas</h2>
+        <p>Bobas è un’app per genitori e caregiver che aiuta a organizzare la cura quotidiana di un neonato: alimentazione, sonno, pannolini, crescita, farmaci, temperatura, dentizione, bagnetti, note, cronologia, tendenze, promemoria ed esportazioni. È uno strumento organizzativo per i genitori, non uno strumento diagnostico. È rivolto agli adulti.</p>
+
+        <h2>3. Dati conservati localmente sul dispositivo</h2>
+        <p>I dati inseriti dai genitori sono conservati localmente nell’app. Tra questi rientrano:</p>
+        <ul>
+            <li>Profili dei bambini: nome o soprannome, data di nascita, sesso, peso e lunghezza alla nascita, modalità di alimentazione e osservazioni facoltative.</li>
+            <li>Profilo del genitore, impostazioni dei promemoria e preferenze dell’app.</li>
+            <li>Voci del diario di cura: poppate, estrazione del latte, pasti, sonno, pannolini, crescita, farmaci, dentizione, bagnetti, temperatura e note.</li>
+            <li>Date, tag, quantità, unità, note, cronologia, tendenze, impostazioni, stato della configurazione iniziale e stato Premium locale.</li>
+        </ul>
+        <p>Il database locale principale usa MMKV cifrato. La chiave di cifratura è conservata nel sistema SecureStore / Keychain / Android Keystore, se disponibile.</p>
+
+        <h2>4. Backup, account ed esportazione</h2>
+        <p>I dati di cura sono conservati localmente. Puoi creare un backup JSON, importare voci selezionate da un file CSV e generare un report PDF (funzione Premium), associare facoltativamente i dispositivi e sincronizzare il diario con un altro caregiver, oppure accedere e usare il backup nel cloud. La sincronizzazione trasferisce dati cifrati attraverso l’infrastruttura di Cloudflare. I dispositivi associati dispongono della chiave per leggerli. L’altro caregiver può conservarne una copia.</p>
+        <p>Chi inizia a usare Bobas può scegliere un backup nel proprio spazio privato su Google Drive o, su iOS, iCloud (CloudKit), senza costi aggiuntivi da parte di Bobas. La disponibilità e gli eventuali costi di archiviazione dipendono dal fornitore. Il backup è cifrato sul dispositivo, ma la chiave è conservata nello stesso spazio privato. Il fornitore può accedere tecnicamente al contenuto. Il backup è separato dal server di Bobas. Le esportazioni JSON e i report PDF sono file leggibili condivisi con il destinatario scelto dall’utente.</p>
+        <p>I backup esistenti sul server di Bobas comprendono le versioni precedenti V1 e V2, disponibili per compatibilità. Se usi un backup esistente, proteggi la relativa frase di recupero. Quando accedi, l’app può inviare al backend un token di identità Apple o Google e memorizzare l’ID utente, il token di sessione, la scadenza, il fornitore e l’eventuale indirizzo e-mail o Apple Private Relay restituito.</p>
+
+        <h2>5. Notifiche</h2>
+        <p>L’app usa notifiche locali per i promemoria di cura. Se concedi l’autorizzazione alle notifiche, l’app registra in un Cloudflare Worker un token Expo Push, un ID di installazione pseudonimo, la piattaforma, la lingua, la versione dell’app, il canale di distribuzione, il numero di build, le categorie selezionate e lo stato Premium per inviare avvisi facoltativi. Per la consegna possono intervenire Expo e APNs o Firebase Cloud Messaging. La revoca dell’autorizzazione rimuove la registrazione del token al successivo avvio o al ritorno nell’app con una connessione di rete. Indipendentemente dall’autorizzazione, l’app invia un ID di installazione pseudonimo, piattaforma, versione, numero di build e canale di distribuzione per misurare quali versioni sono in uso.</p>
+
+        <h2>6. Diagnostica degli arresti anomali</h2>
+        <p>L’app è configurata per usare Sentry nella diagnosi di errori e arresti anomali. Un rapporto può contenere informazioni tecniche sull’arresto, il dispositivo, il sistema operativo, la versione dell’app e la traccia dello stack. Il codice dell’app include misure per evitare l’invio di contenuti familiari e identificativi utente nei rapporti diagnostici.</p>
+
+        <h2>7. Pubblicità</h2>
+        <p>Bobas integra Unity Ads e può mostrare banner nella versione gratuita, ad esempio nelle impostazioni e nel riepilogo della cronologia. L’app è destinata a genitori e caregiver adulti e non è presentata come app per bambini o servizio rivolto ai minori. Su Android dichiara il permesso AD_ID, mentre su iOS può mostrare la richiesta di autorizzazione di sistema ATT prevista dalla piattaforma. Il rifiuto non blocca l’app.</p>
+
+        <h2>8. Acquisti in-app</h2>
+        <p>Acquisti, abbonamenti e ripristino degli acquisti sono gestiti tramite Apple App Store o Google Play. Non riceviamo i dati completi delle carte di pagamento. L’app può memorizzare localmente lo stato Premium, il tipo di diritto di accesso e la data di scadenza.</p>
+
+        <h2>9. Dati dei minori</h2>
+        <p>Bobas è rivolto a genitori e caregiver. I dati dei bambini sono inseriti da un adulto e restano sul dispositivo, a meno che l’utente scelga di esportarli, sincronizzarli in famiglia o effettuarne il backup. Non vendiamo dati dei minori, non creiamo loro account e non pubblichiamo i loro dati su profili social pubblici.</p>
+
+        <h2>10. Trattamento da parte di terzi</h2>
+        <p>I dati possono essere trattati dai fornitori necessari alle funzionalità dell’app: Apple e Google per accesso, acquisti e store, Unity Ads per la pubblicità, Sentry per la diagnostica degli arresti, Cloudflare per l’infrastruttura, Apple e Google per il backup privato scelto ed Expo, APNs e Firebase Cloud Messaging per le notifiche facoltative. Se usi tali funzioni, il backend tratta i dati di sessione, di sincronizzazione cifrati e di backup cifrati nella misura necessaria al loro funzionamento.</p>
+
+        <h2>11. Basi giuridiche del trattamento (GDPR)</h2>
+        <p>Ove si applichi il GDPR, trattiamo i dati sulle seguenti basi:</p>
+        <ul>
+            <li><strong>Art. 6, par. 1, lett. b), GDPR (esecuzione del contratto)</strong> – funzionamento dell’app, inclusi dati locali, diario di cura, esportazione, account e backup (se attivati) e acquisti.</li>
+            <li><strong>Art. 6, par. 1, lett. a), GDPR (consenso)</strong> – funzionalità facoltative che richiedono il consenso o un permesso di sistema, come le notifiche. Puoi revocare il consenso in qualsiasi momento nelle impostazioni di sistema.</li>
+            <li><strong>Art. 6, par. 1, lett. f), GDPR (legittimo interesse)</strong> – diagnostica degli arresti anomali (Sentry) per mantenere stabile l’app e pubblicazione di annunci non personalizzati per finanziare la versione gratuita.</li>
+        </ul>
+
+        <h2>12. Periodi di conservazione</h2>
+        <p>I dati locali restano sul dispositivo fino all’eliminazione nell’app o alla sua disinstallazione. Conservazione ed eliminazione nello spazio privato Drive o iCloud dipendono dall’account, dalla funzione di backup e dalle regole del fornitore. L’eliminazione dell’account Bobas non cancella automaticamente tali copie. Sul server di Bobas un vecchio backup V1 può coesistere con V2 per compatibilità. V2 conserva l’ultima generazione completa verificata. Una volta verificata una nuova generazione, la precedente viene eliminata. In caso di errore o mancata verifica, può rimanere fino al completamento della pulizia. I caricamenti incompleti scadono e vengono rimossi, con nuovi tentativi in caso di errore. I dati dell’account e i backup sul server vengono eliminati quando si conclude con successo l’eliminazione dell’account o si dà seguito a una richiesta di cancellazione. In caso di esito negativo occorre riprovare. Le foto cifrate nell’archivio di transito della sincronizzazione familiare diventano inaccessibili dopo 30 giorni. L’eliminazione è programmata e viene ritentata dopo eventuali errori, quindi l’eliminazione fisica può avvenire in seguito. Le copie sui dispositivi dei caregiver restano separate. La revoca del permesso di notifica rimuove la registrazione push al successivo contatto dell’app con il Worker. Le registrazioni inattive scadono secondo le impostazioni del servizio. La conservazione dei rapporti di arresto dipende dalla configurazione di Sentry e quella dei dati pubblicitari dalle norme di Unity Ads.</p>
+
+        <h2>13. Trasferimenti al di fuori del SEE</h2>
+        <p>I fornitori indicati nella sezione 10, tra cui Apple, Google, Cloudflare, Sentry ed Expo, possono trattare dati tecnici al di fuori dello Spazio economico europeo. Tali trasferimenti si basano sulle garanzie previste dal GDPR, ad esempio le clausole contrattuali tipo della Commissione europea o una decisione di adeguatezza, compreso il quadro UE–USA per la protezione dei dati ove applicabile. I backup nel cloud sono cifrati sul dispositivo prima dell’invio. La custodia delle chiavi e l’accesso del fornitore variano in base alla modalità di backup.</p>
+
+        <h2>14. Cancellazione dei dati e diritti dell’utente</h2>
+        <p><strong><a href="delete-account/#it">Richiedi la cancellazione del tuo account Bobas</a></strong> senza accedere.</p>
+        <p>Puoi cancellare i dati locali usando le funzioni dell’app o disinstallandola. L’uscita dall’account rimuove la sessione locale. Se nel backend è stato creato un account o un backup, puoi richiedere la cancellazione scrivendo a <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. Hai diritto di accesso, rettifica, cancellazione, limitazione del trattamento, portabilità dei dati e opposizione al trattamento basato sul legittimo interesse. Hai inoltre diritto a presentare reclamo a un’autorità di controllo. In Polonia è il presidente dell’Ufficio per la protezione dei dati personali (UODO), ul. Stawki 2, 00-193 Varsavia, <a href="https://uodo.gov.pl/">uodo.gov.pl</a>.</p>
+
+        <h2>15. Contatto</h2>
+        <p>Privacy e assistenza: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+    </section>
+
+    <section id="pt" lang="pt">
+        <h1>Política de Privacidade do Bobas</h1>
+        <p><strong>Última atualização: 2026-11-20</strong></p>
+
+        <h2>1. Responsável pelo tratamento</h2>
+        <p>Na versão para iOS / App Store, o responsável pelo tratamento é <strong>Maciej Siemiński</strong>. Contacto: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+        <p>Na versão do Google Play (Android), o responsável pelo tratamento é <strong>LICENCEPRO POLSKA Sp. z o.o.</strong>, ul. Huculska 6, 00-730 Varsóvia, Polónia. Contacto: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+
+        <h2>2. O que é o Bobas</h2>
+        <p>O Bobas é uma aplicação para pais e cuidadores organizarem os cuidados diários de um bebé: alimentação, sono, fraldas, crescimento, medicação, temperatura, dentição, banhos, notas, histórico, tendências, lembretes e exportações. A aplicação ajuda a organizar os cuidados e não é uma ferramenta de diagnóstico. Destina-se a adultos.</p>
+
+        <h2>3. Dados guardados localmente no dispositivo</h2>
+        <p>Os dados introduzidos pelos pais são guardados localmente na aplicação. Estes incluem:</p>
+        <ul>
+            <li>Perfis dos bebés: nome ou alcunha, data de nascimento, sexo, peso e comprimento à nascença, modo de alimentação e observações opcionais.</li>
+            <li>Perfil do progenitor, definições de lembretes e preferências da aplicação.</li>
+            <li>Registos do diário de cuidados: mamadas, extração de leite, refeições, sono, fraldas, crescimento, medicação, dentição, banhos, temperatura e notas.</li>
+            <li>Datas, etiquetas, quantidades, unidades, notas, histórico, tendências, definições, estado da configuração inicial e estado local do Premium.</li>
+        </ul>
+        <p>A base de dados local principal usa MMKV cifrado. A chave de cifragem é guardada no SecureStore / Keychain / Android Keystore do sistema quando disponível.</p>
+
+        <h2>4. Cópias de segurança, conta e exportação</h2>
+        <p>Os dados de cuidados são guardados localmente. Pode criar uma cópia de segurança em JSON, importar entradas selecionadas de um ficheiro CSV e criar um relatório PDF (funcionalidade Premium), emparelhar dispositivos e sincronizar o diário com outra pessoa cuidadora de forma opcional, ou iniciar sessão e utilizar uma cópia de segurança na nuvem. A sincronização transfere dados cifrados pela infraestrutura da Cloudflare. Os dispositivos emparelhados possuem a chave para os ler. A outra pessoa cuidadora pode manter uma cópia própria.</p>
+        <p>Os novos utilizadores podem optar por uma cópia no seu espaço privado do Google Drive ou, em iOS, do iCloud (CloudKit), sem custos adicionais cobrados pelo Bobas. A disponibilidade e eventuais custos de armazenamento dependem do fornecedor. A cópia é cifrada no dispositivo, mas a chave é guardada no mesmo espaço privado. O fornecedor pode tecnicamente aceder ao conteúdo. Esta cópia é independente do servidor Bobas. As exportações em JSON e os relatórios em PDF são ficheiros legíveis partilhados com o destinatário escolhido pelo utilizador.</p>
+        <p>As cópias existentes no servidor do Bobas incluem as versões anteriores V1 e V2, disponíveis por razões de compatibilidade. Se utilizar uma cópia existente, proteja a respetiva frase de recuperação. Ao iniciar sessão, a aplicação pode enviar um token de identidade da Apple ou da Google para o servidor e guardar o identificador do utilizador, o token de sessão, a data de expiração, o fornecedor e o endereço de e-mail ou Apple Private Relay eventualmente devolvido.</p>
+
+        <h2>5. Notificações</h2>
+        <p>A aplicação usa notificações locais para lembretes de cuidados. Com a sua autorização para enviar notificações, a aplicação regista num Cloudflare Worker um token Expo Push, um identificador pseudónimo de instalação, a plataforma, o idioma, a versão da aplicação, o canal de distribuição, o número de compilação, as categorias selecionadas e o estado Premium para enviar comunicados opcionais. A entrega pode envolver a Expo e o APNs ou o Firebase Cloud Messaging. A revogação da autorização remove o registo do token quando a aplicação for novamente aberta ou retomada com ligação à rede. Independentemente da autorização, a aplicação envia um identificador pseudónimo de instalação, plataforma, versão, número de compilação e canal de distribuição para medir quais as versões em uso.</p>
+
+        <h2>6. Diagnóstico de falhas</h2>
+        <p>A aplicação tem o Sentry configurado para diagnosticar erros e falhas. Um relatório pode incluir informação técnica sobre a falha, o dispositivo, o sistema operativo, a versão da aplicação e o rastreio da pilha. O código da aplicação contém mecanismos para evitar o envio de conteúdos familiares e identificadores de utilizadores nos relatórios de diagnóstico.</p>
+
+        <h2>7. Publicidade</h2>
+        <p>O Bobas inclui Unity Ads e pode mostrar faixas publicitárias na versão gratuita, nomeadamente nas definições e no resumo do histórico. A aplicação destina-se a pais e cuidadores adultos e não é submetida como aplicação infantil ou serviço dirigido a crianças. No Android, declara a permissão AD_ID. No iOS, pode apresentar o pedido de autorização ATT do sistema, exigido pela plataforma. Recusar a autorização não impede o funcionamento da aplicação.</p>
+
+        <h2>8. Compras na aplicação</h2>
+        <p>As compras, subscrições e reposições de compras são geridas pela App Store da Apple ou pelo Google Play. Não recebemos os dados completos do cartão de pagamento. A aplicação pode guardar localmente o estado Premium, o tipo de direito de acesso e a data de expiração.</p>
+
+        <h2>9. Dados de crianças</h2>
+        <p>O Bobas destina-se a pais e cuidadores. Os dados relativos às crianças são introduzidos por um adulto e permanecem no dispositivo, salvo se o utilizador usar deliberadamente a exportação, a sincronização familiar ou a cópia de segurança. Não vendemos dados de crianças, não criamos contas infantis e não publicamos esses dados em perfis públicos de redes sociais.</p>
+
+        <h2>10. Tratamento por terceiros</h2>
+        <p>Os dados podem ser tratados pelos fornecedores necessários ao funcionamento da aplicação: Apple e Google para início de sessão, compras e lojas, Unity Ads para publicidade, Sentry para diagnóstico de falhas, Cloudflare para a infraestrutura, Apple e Google para a cópia privada escolhida e Expo, APNs e Firebase Cloud Messaging para notificações opcionais. Ao usar estas funções, o servidor trata dados de sessão, dados cifrados de sincronização e dados cifrados das cópias de segurança na medida necessária ao seu funcionamento.</p>
+
+        <h2>11. Fundamentos jurídicos do tratamento (RGPD)</h2>
+        <p>Quando o RGPD se aplica, tratamos dados com os seguintes fundamentos:</p>
+        <ul>
+            <li><strong>Art. 6.º, n.º 1, al. b), do RGPD (execução de um contrato)</strong> – funcionamento das funcionalidades da aplicação, incluindo dados locais, diário de cuidados, exportação, conta e cópia de segurança (quando ativadas) e compras.</li>
+            <li><strong>Art. 6.º, n.º 1, al. a), do RGPD (consentimento)</strong> – funções opcionais que exigem consentimento ou autorização do sistema, como as notificações. O consentimento pode ser retirado a qualquer momento nas definições do sistema.</li>
+            <li><strong>Art. 6.º, n.º 1, al. f), do RGPD (interesse legítimo)</strong> – diagnóstico de falhas (Sentry) para manter a aplicação estável e apresentação de publicidade não personalizada que financia a versão gratuita.</li>
+        </ul>
+
+        <h2>12. Prazos de conservação</h2>
+        <p>Os dados locais permanecem no dispositivo até serem eliminados na aplicação ou até que esta seja desinstalada. A conservação e a eliminação no Drive ou iCloud privado dependem da conta, da função de cópia e das regras do fornecedor. Eliminar a conta Bobas não elimina automaticamente essas cópias. No servidor Bobas, uma cópia antiga V1 pode coexistir com a V2 por motivos de compatibilidade. A V2 conserva a última geração completa verificada. Após a verificação de uma nova, a anterior é eliminada. Em caso de erro ou falta de verificação, a anterior pode permanecer até a limpeza ser concluída. Os carregamentos incompletos expiram e são removidos, com novas tentativas em caso de erro. Os dados da conta e as cópias no servidor são eliminados após a eliminação efetiva da conta ou o cumprimento de um pedido de apagamento. Em caso de falha, é necessário tentar de novo. As fotografias cifradas guardadas temporariamente para a sincronização familiar ficam inacessíveis após 30 dias. A eliminação é agendada e repetida se ocorrer um erro, pelo que a eliminação física pode ocorrer mais tarde. As cópias nos dispositivos dos cuidadores permanecem separadas. Revogar a autorização de notificações remove o registo push no contacto seguinte da aplicação com o Worker. Os registos inativos expiram conforme as definições do serviço. A conservação dos relatórios de falhas depende da configuração do Sentry e a dos dados publicitários depende da política de Unity Ads.</p>
+
+        <h2>13. Transferências para fora do EEE</h2>
+        <p>Os fornecedores mencionados na secção 10, incluindo Apple, Google, Cloudflare, Sentry e Expo, podem tratar dados técnicos fora do Espaço Económico Europeu. Estas transferências baseiam-se nas garantias exigidas pelo RGPD, como as cláusulas contratuais-tipo da Comissão Europeia ou uma decisão de adequação (incluindo o Quadro de Privacidade de Dados UE–EUA, quando aplicável). As cópias na nuvem são cifradas no dispositivo antes do envio. A guarda das chaves e o acesso do fornecedor variam consoante o modo de cópia escolhido.</p>
+
+        <h2>14. Apagamento e direitos do utilizador</h2>
+        <p><strong><a href="delete-account/#pt">Peça a eliminação da sua conta Bobas</a></strong> sem iniciar sessão.</p>
+        <p>Pode apagar dados locais através das funções da aplicação ou desinstalando-a. Terminar a sessão remove a sessão local da conta. Se tiver sido criada uma conta ou uma cópia no servidor, pode solicitar a eliminação escrevendo para <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. Tem direitos de acesso, retificação, apagamento, limitação do tratamento, portabilidade dos dados e oposição ao tratamento baseado no interesse legítimo. Pode também apresentar uma reclamação à autoridade de controlo. Na Polónia, é o Presidente do Gabinete de Proteção de Dados Pessoais (UODO), ul. Stawki 2, 00-193 Varsóvia, <a href="https://uodo.gov.pl/">uodo.gov.pl</a>.</p>
+
+        <h2>15. Contacto</h2>
+        <p>Privacidade e apoio: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+    </section>
+
+    <section id="uk" lang="uk">
+        <h1>Політика конфіденційності Bobas</h1>
+        <p><strong>Останнє оновлення: 2026-11-20</strong></p>
+
+        <h2>1. Контролер персональних даних</h2>
+        <p>Для версії iOS / App Store контролером персональних даних є <strong>Maciej Siemiński</strong>. Контакт: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+        <p>Для версії Google Play (Android) контролером персональних даних є <strong>LICENCEPRO POLSKA Sp. z o.o.</strong>, вул. Huculska 6, 00-730 Варшава, Польща. Контакт: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+
+        <h2>2. Що таке Bobas</h2>
+        <p>Bobas допомагає батькам і особам, які доглядають за немовлям, організовувати повсякденний догляд: годування, сон, зміну підгузків, відстеження росту, ліки, вимірювання температури, прорізування зубів, купання, нотатки, історію, динаміку, нагадування й експорт. Застосунок допомагає організувати догляд і не є діагностичним засобом. Він призначений для дорослих.</p>
+
+        <h2>3. Дані, що зберігаються локально на пристрої</h2>
+        <p>Введені батьками дані зберігаються локально в застосунку. Зокрема, це:</p>
+        <ul>
+            <li>Профілі дітей: ім’я або псевдонім, дата народження, стать, вага та довжина тіла при народженні, спосіб годування й необов’язкові спостереження.</li>
+            <li>Профіль одного з батьків, налаштування нагадувань і параметри застосунку.</li>
+            <li>Записи в щоденнику догляду: годування, зціджування молока, їжа, сон, підгузки, ріст, ліки, прорізування зубів, купання, температура й нотатки.</li>
+            <li>Дати, мітки, кількість, одиниці вимірювання, нотатки, історія, динаміка, налаштування, стан початкового налаштування та локальний статус Premium.</li>
+        </ul>
+        <p>В основній локальній базі даних використовується зашифроване сховище MMKV. Ключ шифрування зберігається в системному SecureStore / Keychain / Android Keystore за наявності.</p>
+
+        <h2>4. Резервні копії, обліковий запис та експорт</h2>
+        <p>Дані про догляд зберігаються локально. Ви можете створити резервну копію у форматі JSON, імпортувати вибрані записи з CSV, створити звіт у форматі PDF (функція Premium), за бажанням зв’язати пристрої й синхронізувати щоденник з іншою особою, яка доглядає за дитиною, або скористатися входом і хмарним резервним копіюванням. Під час синхронізації зашифровані дані передаються через інфраструктуру Cloudflare. Ключ для їх читання мають зв’язані пристрої. Інша особа може зберегти власну копію.</p>
+        <p>Нові користувачі можуть створити резервну копію в особистому сховищі Google Drive або, на iOS, iCloud (CloudKit) без додаткової плати з боку Bobas. Доступність і можлива оплата за сховище залежать від постачальника. Копія шифрується на пристрої, але її ключ зберігається в тому самому приватному сховищі. Постачальник має технічну можливість отримати доступ до вмісту. Ця копія зберігається окремо від сервера Bobas. Експортовані дані у форматі JSON і звіти PDF можна прочитати, ними діляться з вибраним користувачем одержувачем.</p>
+        <p>Наявні копії на сервері Bobas включають попередні версії V1 і V2, доступні для сумісності. Якщо у вас є така копія, захищайте її фразу відновлення. Під час входу застосунок може надіслати серверу токен ідентифікації Apple або Google і зберегти ідентифікатор користувача, токен сеансу, строк дії, постачальника й отриману адресу електронної пошти чи адресу Apple Private Relay.</p>
+
+        <h2>5. Сповіщення</h2>
+        <p>Застосунок використовує локальні сповіщення для нагадувань про догляд. Якщо ви дозволите сповіщення, застосунок зареєструє в Cloudflare Worker токен Expo Push, псевдонімний ідентифікатор встановлення, платформу, мову, версію застосунку, канал розповсюдження, номер збірки, вибрані категорії та статус Premium для надсилання необов’язкових оголошень. У доставленні можуть брати участь Expo та APNs або Firebase Cloud Messaging. Якщо відкликати дозвіл, реєстрація токена буде видалена під час наступного запуску або повернення до застосунку за наявності з’єднання з мережею. Незалежно від дозволу застосунок надсилає псевдонімний ідентифікатор встановлення, платформу, версію, номер збірки та канал розповсюдження для вимірювання використання різних версій.</p>
+
+        <h2>6. Діагностика збоїв</h2>
+        <p>У застосунку налаштовано Sentry для діагностики помилок і збоїв. Звіт може містити технічні відомості про збій, пристрій, операційну систему й версію застосунку, а також трасування стека. Код застосунку містить засоби захисту від надсилання сімейного вмісту та ідентифікаторів користувачів у діагностичних звітах.</p>
+
+        <h2>7. Реклама</h2>
+        <p>Bobas містить Unity Ads і може показувати банерну рекламу в безкоштовній версії, зокрема в налаштуваннях і в огляді історії. Застосунок призначено для дорослих батьків та осіб, які доглядають за дитиною. Він не подається як дитячий застосунок чи послуга для дітей. На Android застосунок декларує дозвіл AD_ID, а на iOS може показувати системний запит дозволу ATT, якого вимагає платформа. Відмова не блокує роботу застосунку.</p>
+
+        <h2>8. Покупки в застосунку</h2>
+        <p>Покупки, підписки та відновлення покупок обробляє Apple App Store або Google Play. Ми не отримуємо повних реквізитів платіжної картки. Застосунок може зберігати локально статус Premium, тип права доступу й дату його закінчення.</p>
+
+        <h2>9. Дані дітей</h2>
+        <p>Bobas призначений для батьків і осіб, які доглядають за дітьми. Дані дитини вводить дорослий, і вони залишаються на пристрої, якщо користувач свідомо не скористається експортом, сімейною синхронізацією або резервним копіюванням. Ми не продаємо дані дітей, не створюємо дитячих облікових записів і не публікуємо дані дітей у відкритих профілях соціальних мереж.</p>
+
+        <h2>10. Обробка даних третіми сторонами</h2>
+        <p>Дані можуть обробляти постачальники, необхідні для роботи функцій застосунку: Apple і Google — для входу, покупок і магазинів, Unity Ads — для реклами, Sentry — для діагностики збоїв, Cloudflare — для інфраструктури, Apple і Google — для вибраної приватної резервної копії, а Expo, APNs і Firebase Cloud Messaging — для необов’язкових сповіщень. Під час використання цих функцій серверна частина обробляє дані сеансу, зашифровані дані синхронізації та зашифровані резервні копії в обсязі, необхідному для їх роботи.</p>
+
+        <h2>11. Правові підстави обробки даних (GDPR)</h2>
+        <p>У випадках, коли застосовується GDPR, ми обробляємо дані на таких підставах:</p>
+        <ul>
+            <li><strong>Ст. 6, п. 1, підп. b GDPR (виконання договору)</strong> – робота функцій застосунку, зокрема локальні дані, щоденник догляду, експорт, обліковий запис і резервне копіювання (якщо ввімкнено), а також покупки.</li>
+            <li><strong>Ст. 6, п. 1, підп. a GDPR (згода)</strong> – необов’язкові функції, для яких потрібні згода або системний дозвіл, наприклад сповіщення. Згоду можна будь-коли відкликати в системних налаштуваннях.</li>
+            <li><strong>Ст. 6, п. 1, підп. f GDPR (законний інтерес)</strong> – діагностика збоїв (Sentry) для підтримання стабільної роботи застосунку та показ неперсоналізованої реклами, яка фінансує безкоштовну версію.</li>
+        </ul>
+
+        <h2>12. Строки зберігання</h2>
+        <p>Локальні дані залишаються на пристрої, доки їх не видалять у застосунку або доки не видалять сам застосунок. Зберігання й видалення в приватному сховищі Drive чи iCloud залежать від облікового запису, функції копіювання та правил постачальника. Видалення облікового запису Bobas не видаляє такі копії автоматично. На сервері Bobas попередня копія V1 може зберігатися разом із V2 для сумісності. У V2 зберігається остання перевірена повна генерація копії. Після перевірки нової попередню видаляють. У разі помилки або відсутності перевірки попередня копія може зберігатися до успішного очищення. Строк дії незавершених завантажень закінчується, і їх видаляють, а в разі помилок спроби повторюють. Дані облікового запису та копії на сервері видаляються після успішного видалення облікового запису або виконання запиту на видалення. Якщо видалення не вдалося, його потрібно повторити. Зашифровані фотографії в проміжному сховищі сімейної синхронізації стають недоступними через 30 днів. Їх видалення заплановано й повторюється в разі помилки, тому фізичне видалення може відбутися пізніше. Копії на пристроях осіб, які доглядають за дитиною, залишаються окремими. Після відкликання дозволу на сповіщення реєстрація push видаляється під час наступного зв’язку застосунку з Worker. Неактивні реєстрації закінчуються згідно з налаштуваннями сервісу. Строки зберігання звітів про збої залежать від конфігурації Sentry, а рекламних даних — від політики Unity Ads.</p>
+
+        <h2>13. Передача даних за межі ЄЕЗ</h2>
+        <p>Постачальники, перелічені в розділі 10 (зокрема Apple, Google, Cloudflare, Sentry та Expo), можуть обробляти технічні дані за межами Європейської економічної зони. Така передача здійснюється з гарантіями, передбаченими GDPR, наприклад на підставі стандартних договірних положень Європейської комісії або рішення про належний рівень захисту (зокрема Рамкової програми конфіденційності даних ЄС–США, якщо застосовна). Хмарні резервні копії шифруються на пристрої до надсилання. Зберігання ключів і доступ постачальника залежать від способу резервного копіювання.</p>
+
+        <h2>14. Видалення даних і права користувачів</h2>
+        <p><strong><a href="delete-account/#uk">Подати запит на видалення облікового запису Bobas</a></strong> без входу.</p>
+        <p>Ви можете видалити локальні дані за допомогою функцій застосунку або видаливши сам застосунок. Вихід з облікового запису видаляє локальний сеанс. Якщо на сервері створено обліковий запис або резервну копію, можете надіслати запит на видалення на адресу <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. Ви маєте право на доступ, виправлення, видалення, обмеження обробки та перенесення даних, а також право заперечувати проти обробки на підставі законного інтересу. Ви також можете подати скаргу до наглядового органу. У Польщі це голова Управління із захисту персональних даних (UODO), вул. Stawki 2, 00-193 Варшава, <a href="https://uodo.gov.pl/">uodo.gov.pl</a>.</p>
+
+        <h2>15. Контакти</h2>
+        <p>Питання конфіденційності та підтримка: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+    </section>
+
+    <section id="ja" lang="ja">
+        <h1>Bobas プライバシーポリシー</h1>
+        <p><strong>最終更新日：2026-11-20</strong></p>
+
+        <h2>1. データ管理者</h2>
+        <p>iOS / App Store 版のデータ管理者は <strong>Maciej Siemiński</strong> です。連絡先：<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>。</p>
+        <p>Google Play（Android）版のデータ管理者は <strong>LICENCEPRO POLSKA Sp. z o.o.</strong>（ul. Huculska 6, 00-730 Warszawa, ポーランド）です。連絡先：<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>。</p>
+
+        <h2>2. Bobas について</h2>
+        <p>Bobas は、保護者や養育者が乳児の日々のケアを管理するためのアプリです。授乳、睡眠、おむつ、成長、投薬、体温、歯の生え始め、入浴、メモ、履歴、傾向、リマインダー、データの書き出しに対応しています。保護者の記録管理を支援するもので、診断ツールではありません。成人を対象としています。</p>
+
+        <h2>3. 端末に保存されるデータ</h2>
+        <p>保護者が入力したデータはアプリ内にローカルで保存されます。主な項目は次のとおりです。</p>
+        <ul>
+            <li>子どものプロフィール：名前またはニックネーム、生年月日、性別、出生時の体重と身長、授乳方法、任意の観察記録。</li>
+            <li>保護者のプロフィール、リマインダーの設定、アプリの環境設定。</li>
+            <li>ケア日誌の記録：授乳、搾乳、食事、睡眠、おむつ、成長、投薬、歯の生え始め、入浴、体温、メモ。</li>
+            <li>日付、タグ、量、単位、メモ、履歴、傾向、設定、初期設定の進行状況、端末内の Premium の状態。</li>
+        </ul>
+        <p>主なローカルデータベースには暗号化した MMKV を使用します。利用できる場合は、暗号鍵をシステムの SecureStore / Keychain / Android Keystore に保存します。</p>
+
+        <h2>4. バックアップ、アカウント、書き出し</h2>
+        <p>ケアのデータは端末内に保存されます。JSON バックアップの作成、CSV からの選択した記録の取り込み、PDF レポートの作成（Premium 機能）ができます。任意で端末をペアリングし、別の養育者と日誌を同期することも、サインインしてクラウドバックアップを利用することもできます。同期では Cloudflare のインフラを経由して暗号化データを転送します。ペアリング済みの端末がデータを読み取るための鍵を保持します。もう一方の養育者は独自のコピーを保持できます。</p>
+        <p>新規ユーザーは、ご自身の非公開の Google Drive ストレージ、または iOS では iCloud（CloudKit）を使ったバックアップを、Bobas からの追加料金なしで選べます。利用可否やストレージ料金の有無は、選んだ提供事業者によって異なります。バックアップは端末で暗号化しますが、鍵は同じ非公開ストレージに保存されます。そのため、提供事業者は技術的にはバックアップの内容にアクセスできます。このバックアップは Bobas のサーバーとは別に管理されます。書き出した JSON や PDF レポートは閲覧可能な形式で、ユーザーが選んだ相手と共有されます。</p>
+        <p>Bobas のサーバー上の既存のバックアップには、互換性のために利用できる旧方式の V1 と V2 があります。既存のバックアップをご利用の場合は復元フレーズを安全に管理してください。サインイン時に、アプリが Apple または Google の ID トークンをバックエンドに送信し、ユーザー ID、セッショントークン、有効期限、認証プロバイダー、返されたメールアドレスまたは Apple Private Relay のアドレスを保存することがあります。</p>
+
+        <h2>5. 通知</h2>
+        <p>ケアのリマインダーにはローカル通知を使います。通知を許可すると、任意のお知らせを配信するため、アプリは Expo Push トークン、仮名化したインストール ID、プラットフォーム、言語、アプリのバージョン、配信チャネル、ビルド番号、選択したカテゴリ、Premium の状態を Cloudflare Worker に登録します。配信には Expo と、APNs または Firebase Cloud Messaging が関与することがあります。通知の許可を取り消すと、次にネット接続がある状態でアプリを起動するかアプリに戻ったときに、トークンの登録が削除されます。通知を許可したかどうかにかかわらず、利用されているバージョンを計測するため、アプリは仮名化したインストール ID、プラットフォーム、バージョン、ビルド番号、配信チャネルを送信します。</p>
+
+        <h2>6. クラッシュ診断</h2>
+        <p>アプリではエラーやクラッシュの診断に Sentry を使用するよう設定しています。レポートには、クラッシュ、端末、OS、アプリのバージョン、スタックトレースに関する技術情報が含まれることがあります。アプリのコードには、家族に関する内容やユーザー識別子が診断レポートで送信されるのを防ぐ対策が含まれています。</p>
+
+        <h2>7. 広告</h2>
+        <p>Bobas は Unity Ads を組み込んでおり、無料版では設定や履歴の概要などにバナー広告が表示されることがあります。このアプリは成人の保護者と養育者を対象としており、子ども向けアプリや子どもを対象としたサービスとして申請していません。Android では AD_ID 権限を宣言します。iOS ではプラットフォームが要求する ATT のシステム許可画面を表示することがあります。許可しなくてもアプリは利用できます。</p>
+
+        <h2>8. アプリ内購入</h2>
+        <p>購入、サブスクリプション、購入の復元は Apple App Store または Google Play が処理します。当方が決済カードの完全な情報を受け取ることはありません。アプリは Premium の状態、利用権の種類、有効期限を端末内に保存することがあります。</p>
+
+        <h2>9. 子どものデータ</h2>
+        <p>Bobas は保護者や養育者向けのアプリです。成人が入力した子どものデータは、利用者が自ら書き出し、家族間同期、バックアップのいずれかを利用しない限り、端末に留まります。当方は子どものデータを販売せず、子どものアカウントを作成せず、子どものデータを SNS の公開プロフィールに掲載することもありません。</p>
+
+        <h2>10. 第三者による処理</h2>
+        <p>アプリ機能に必要なサービス提供事業者がデータを処理することがあります。サインイン、購入、ストアには Apple と Google、広告には Unity Ads、クラッシュ診断には Sentry、アプリのインフラには Cloudflare、選択した非公開のバックアップには Apple と Google、任意の通知には Expo、APNs、Firebase Cloud Messaging が関与します。これらの機能を使う場合、必要な範囲でバックエンドがセッションデータ、暗号化された同期データ、暗号化されたバックアップデータを処理します。</p>
+
+        <h2>11. 処理の法的根拠（GDPR）</h2>
+        <p>GDPR が適用される場合、以下を法的根拠としてデータを処理します。</p>
+        <ul>
+            <li><strong>GDPR 第6条第1項(b)（契約の履行）</strong>：端末内のデータ、ケア日誌、書き出し、有効にしたアカウントとバックアップ、購入などのアプリ機能の提供。</li>
+            <li><strong>GDPR 第6条第1項(a)（同意）</strong>：通知など、同意またはシステム権限が必要な任意の機能。同意はシステム設定でいつでも撤回できます。</li>
+            <li><strong>GDPR 第6条第1項(f)（正当な利益）</strong>：アプリの安定性を維持するためのクラッシュ診断（Sentry）と、無料版の運営費を賄うためのパーソナライズされていない広告の配信。</li>
+        </ul>
+
+        <h2>12. 保存期間</h2>
+        <p>端末内のデータは、アプリ内で削除するか、アプリをアンインストールするまで保存されます。非公開の Drive または iCloud での保存と削除は、アカウント、バックアップ機能、提供事業者の規則に従います。Bobas のアカウントを削除しても、これらのコピーは自動的には削除されません。Bobas サーバーでは互換性のため旧方式の V1 が V2 と併存する場合があります。V2 は検証済みの完全なバックアップのうち最新の世代を保持します。新しい世代の検証が済むと前の世代は削除されますが、エラーが生じたり検証が完了しなかったりした場合は、削除処理が成功するまで残ることがあります。未完了のアップロードには有効期限があり、期限後に削除されます。エラーが起きた場合は再試行します。アカウントデータとサーバー上のバックアップは、アカウントの削除が成功した場合、または削除の請求が履行された場合に削除されます。失敗した場合は再試行が必要です。家族間同期の一時ストレージにある暗号化された写真には、30 日が経過するとアクセスできなくなります。削除処理はスケジュールされ、エラーが発生した場合は再試行されるため、実際の消去は後日になることがあります。養育者の端末内のコピーは個別に保持されます。通知の許可を取り消すと、次にアプリが Worker に接続したときにプッシュ通知の登録を削除します。使用されていない登録はサービスの設定に従って失効します。クラッシュレポートの保存期間は Sentry の設定、広告データの保存期間は Unity Ads の方針によります。</p>
+
+        <h2>13. EEA 域外へのデータ移転</h2>
+        <p>第10節に記載した Apple、Google、Cloudflare、Sentry、Expo などの事業者は、欧州経済領域（EEA）の域外で技術データを処理することがあります。移転には、欧州委員会の標準契約条項、十分性認定（該当する場合の EU–米国データプライバシー枠組みを含む）など、GDPR が求める保護措置を適用します。クラウドバックアップは送信前に端末で暗号化します。鍵の管理方法や事業者によるアクセスの可否は、選択したバックアップ方法によって異なります。</p>
+
+        <h2>14. データの削除と利用者の権利</h2>
+        <p><strong><a href="delete-account/#ja">Bobas アカウントの削除を申請する</a></strong>（サインイン不要）。</p>
+        <p>アプリの機能を使うかアンインストールすることで、端末内のデータを削除できます。サインアウトすると、端末内のアカウントセッションは削除されます。バックエンドにアカウントやバックアップを作成した場合は、<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> にメールを送って削除を請求できます。利用者には、データへのアクセス、訂正、消去、処理の制限、データポータビリティを求める権利と、正当な利益に基づく処理に異議を申し立てる権利があります。監督機関に苦情を申し立てることもできます。ポーランドでは個人データ保護局（UODO）長官が窓口です（ul. Stawki 2, 00-193 Warszawa、<a href="https://uodo.gov.pl/">uodo.gov.pl</a>）。</p>
+
+        <h2>15. 連絡先</h2>
+        <p>プライバシーやサポートに関するお問い合わせ：<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>。</p>
+    </section>
+
+    <section id="ko" lang="ko">
+        <h1>Bobas 개인정보 처리방침</h1>
+        <p><strong>최종 업데이트: 2026-11-20</strong></p>
+
+        <h2>1. 개인정보처리자</h2>
+        <p>iOS / App Store 버전의 개인정보처리자는 <strong>Maciej Siemiński</strong>입니다. 연락처: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+        <p>Google Play(Android) 버전의 개인정보처리자는 <strong>LICENCEPRO POLSKA Sp. z o.o.</strong>(ul. Huculska 6, 00-730 Warszawa, 폴란드)입니다. 연락처: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+
+        <h2>2. Bobas 소개</h2>
+        <p>Bobas는 부모와 보호자가 영유아의 일상 돌봄을 관리하는 앱입니다. 수유, 수면, 기저귀, 성장, 투약, 체온, 이가 나는 시기, 목욕, 메모, 기록, 추이, 알림, 내보내기 기능을 제공합니다. 보호자의 돌봄 관리를 돕는 앱이며 진단 도구가 아닙니다. 성인을 대상으로 합니다.</p>
+
+        <h2>3. 기기에 로컬로 저장되는 데이터</h2>
+        <p>부모가 입력한 데이터는 앱에 로컬로 저장됩니다. 여기에는 다음 항목이 포함됩니다.</p>
+        <ul>
+            <li>아이 프로필: 이름 또는 별명, 생년월일, 성별, 출생 체중과 신장, 수유 방식, 선택적으로 입력한 관찰 사항.</li>
+            <li>부모 프로필, 알림 설정, 앱 환경설정.</li>
+            <li>돌봄 일지 기록: 수유, 유축, 식사, 수면, 기저귀, 성장, 투약, 이가 나는 시기, 목욕, 체온, 메모.</li>
+            <li>날짜, 태그, 수량, 단위, 메모, 기록, 추이, 설정, 초기 설정 진행 상태 및 기기 내 Premium 상태.</li>
+        </ul>
+        <p>기본 로컬 데이터베이스는 암호화된 MMKV를 사용합니다. 암호화 키는 사용할 수 있는 경우 시스템의 SecureStore / Keychain / Android Keystore에 저장됩니다.</p>
+
+        <h2>4. 백업, 계정 및 내보내기</h2>
+        <p>돌봄 데이터는 로컬로 저장됩니다. JSON 백업을 만들고, CSV에서 선택한 기록을 가져오며, PDF 보고서(Premium 기능)를 만들 수 있습니다. 선택적으로 기기를 연결해 다른 보호자와 일지를 동기화하거나 로그인과 클라우드 백업을 사용할 수 있습니다. 동기화는 Cloudflare 인프라를 통해 암호화된 데이터를 전송합니다. 연결된 기기에는 데이터를 읽을 수 있는 키가 있습니다. 다른 보호자는 자신의 사본을 보관할 수 있습니다.</p>
+        <p>새 사용자는 Bobas에 추가 요금을 내지 않고 자신의 비공개 Google Drive 저장공간 또는 iOS의 iCloud(CloudKit)에 백업할 수 있습니다. 이용 가능 여부와 저장공간 요금은 제공업체에 따라 달라집니다. 백업은 기기에서 암호화되지만 키는 같은 비공개 저장공간에 저장되므로, 제공업체가 기술적으로 백업 내용에 접근할 수 있습니다. 이 백업은 Bobas 서버와 별개입니다. 내보낸 JSON과 PDF 보고서는 내용을 읽을 수 있는 파일이며 사용자가 선택한 수신자와 공유됩니다.</p>
+        <p>Bobas 서버에 있는 기존 백업에는 호환성을 위해 제공하는 이전 방식의 V1 및 V2가 포함됩니다. 기존 백업을 사용하는 경우 복구 문구를 안전하게 보관하세요. 로그인할 때 앱이 Apple 또는 Google 인증 토큰을 백엔드로 전송하고 사용자 ID, 세션 토큰, 만료 시점, 제공업체 및 반환된 이메일 주소나 Apple Private Relay 주소를 저장할 수 있습니다.</p>
+
+        <h2>5. 알림</h2>
+        <p>앱은 돌봄 알림을 기기에서 직접 표시합니다. 알림 권한이 부여되면 선택적 공지 전달을 위해 Expo Push 토큰, 가명 처리된 설치 ID, 플랫폼, 언어, 앱 버전, 배포 채널, 빌드 번호, 선택한 카테고리 및 Premium 상태를 Cloudflare Worker에 등록합니다. 전달에는 Expo와 APNs 또는 Firebase Cloud Messaging이 관여할 수 있습니다. 권한을 철회하면 다음에 네트워크에 연결된 상태로 앱을 실행하거나 앱으로 돌아올 때 토큰 등록이 삭제됩니다. 알림 권한과 별개로, 앱은 사용 중인 버전을 집계하기 위해 가명 처리된 설치 ID, 플랫폼, 버전, 빌드 번호 및 배포 채널을 전송합니다.</p>
+
+        <h2>6. 오류 및 비정상 종료 진단</h2>
+        <p>앱은 오류와 비정상 종료를 진단하기 위해 Sentry를 사용하도록 구성되어 있습니다. 보고서에는 비정상 종료, 기기, 운영체제, 앱 버전 및 스택 트레이스에 대한 기술 정보가 포함될 수 있습니다. 앱 코드에는 가족 관련 콘텐츠와 사용자 식별자가 진단 보고서에 전송되지 않도록 하는 보호 조치가 포함되어 있습니다.</p>
+
+        <h2>7. 광고</h2>
+        <p>Bobas에는 Unity Ads가 포함되어 있으며 무료 버전의 설정 화면이나 기록 요약 등에 배너 광고가 표시될 수 있습니다. 앱은 성인 부모와 보호자를 대상으로 하며 아동용 앱이나 아동 대상 서비스로 제출되지 않습니다. Android에서는 AD_ID 권한을 선언하고, iOS에서는 플랫폼이 요구하는 ATT 시스템 권한 요청을 표시할 수 있습니다. 권한을 거부해도 앱을 사용할 수 있습니다.</p>
+
+        <h2>8. 앱 내 구매</h2>
+        <p>구매, 구독 및 구매 복원은 Apple App Store 또는 Google Play에서 처리합니다. 당사는 결제 카드의 전체 정보를 받지 않습니다. 앱은 Premium 상태, 이용 권한의 유형 및 만료일을 기기에 저장할 수 있습니다.</p>
+
+        <h2>9. 아동의 데이터</h2>
+        <p>Bobas는 부모와 보호자를 위한 앱입니다. 아동 관련 데이터는 성인이 입력하며, 사용자가 내보내기, 가족 동기화 또는 백업 기능을 선택하여 사용하지 않는 한 기기에 남습니다. 당사는 아동의 데이터를 판매하거나 아동 계정을 만들거나 아동의 데이터를 공개 소셜 미디어 프로필에 게시하지 않습니다.</p>
+
+        <h2>10. 제3자에 의한 데이터 처리</h2>
+        <p>앱의 기능을 제공하는 데 필요한 서비스 제공업체가 데이터를 처리할 수 있습니다. 로그인, 구매 및 앱 스토어에는 Apple과 Google, 광고에는 Unity Ads, 비정상 종료 진단에는 Sentry, 앱 인프라에는 Cloudflare, 선택한 비공개 백업에는 Apple과 Google, 선택적 알림에는 Expo, APNs 및 Firebase Cloud Messaging이 관여합니다. 이러한 기능을 사용하면 백엔드는 기능 제공에 필요한 범위 내에서 세션 데이터, 암호화된 동기화 데이터와 암호화된 백업을 처리합니다.</p>
+
+        <h2>11. 처리의 법적 근거(GDPR)</h2>
+        <p>GDPR이 적용되는 경우 다음 법적 근거에 따라 데이터를 처리합니다.</p>
+        <ul>
+            <li><strong>GDPR 제6조 제1항 (b)호(계약 이행)</strong> – 기기 내 데이터, 돌봄 일지, 내보내기, 활성화한 계정과 백업 및 구매 등 앱 기능을 제공합니다.</li>
+            <li><strong>GDPR 제6조 제1항 (a)호(동의)</strong> – 알림처럼 동의 또는 시스템 권한이 필요한 선택적 기능에 적용됩니다. 동의는 시스템 설정에서 언제든지 철회할 수 있습니다.</li>
+            <li><strong>GDPR 제6조 제1항 (f)호(정당한 이익)</strong> – 앱의 안정성을 위한 비정상 종료 진단(Sentry)과 무료 버전의 운영 비용을 충당하기 위한 비개인화 광고 표시에 적용됩니다.</li>
+        </ul>
+
+        <h2>12. 데이터 보관 기간</h2>
+        <p>로컬 데이터는 앱에서 데이터를 지우거나 앱을 삭제할 때까지 기기에 남습니다. 비공개 Drive 또는 iCloud의 보관 및 삭제는 계정, 백업 기능 및 제공업체의 정책에 따릅니다. Bobas 계정을 삭제해도 해당 백업은 자동으로 삭제되지 않습니다. Bobas 서버에서는 호환성을 위해 이전 V1 백업과 V2가 함께 존재할 수 있습니다. V2는 검증을 완료한 최신 전체 백업 세대를 보관합니다. 새 세대를 검증하면 이전 세대를 삭제하지만, 오류가 발생하거나 검증이 완료되지 않으면 정리가 성공할 때까지 이전 세대가 남을 수 있습니다. 완료되지 않은 업로드는 만료된 후 정리되며, 오류가 발생하면 다시 시도합니다. 계정 데이터와 서버 백업은 계정 삭제가 성공하거나 삭제 요청이 이행된 후 삭제됩니다. 삭제에 실패하면 재시도가 필요합니다. 가족 동기화의 임시 전송 저장소에 있는 암호화된 사진에는 30일이 지나면 접근할 수 없습니다. 삭제 작업은 예약되며 오류가 발생한 경우 재시도하므로 실제 삭제는 나중에 이루어질 수 있습니다. 보호자의 기기에 있는 사본은 별도로 유지됩니다. 알림 권한을 철회하면 다음에 앱이 Worker에 연결될 때 푸시 등록이 삭제됩니다. 사용되지 않는 등록은 서비스 설정에 따라 만료됩니다. 비정상 종료 보고서의 보관은 Sentry의 설정에, 광고 데이터의 보관은 Unity Ads의 정책에 따릅니다.</p>
+
+        <h2>13. 유럽경제지역(EEA) 외부로의 데이터 이전</h2>
+        <p>제10절에 명시된 Apple, Google, Cloudflare, Sentry, Expo 등의 제공업체는 유럽경제지역 외부에서 기술 데이터를 처리할 수 있습니다. 이전에는 유럽연합 집행위원회의 표준계약조항 또는 적정성 결정(해당하는 경우 EU–미국 데이터 프라이버시 프레임워크 포함) 등 GDPR이 요구하는 보호 조치가 적용됩니다. 클라우드 백업은 전송 전에 기기에서 암호화됩니다. 키 보관 방식과 제공업체의 접근 범위는 선택한 백업 방식에 따라 다릅니다.</p>
+
+        <h2>14. 삭제 및 사용자 권리</h2>
+        <p><strong><a href="delete-account/#ko">Bobas 계정 삭제 요청</a></strong>은 로그인 없이 제출할 수 있습니다.</p>
+        <p>앱의 기능을 사용하거나 앱을 삭제하여 기기 내 데이터를 삭제할 수 있습니다. 로그아웃하면 기기에 저장된 계정 세션이 삭제됩니다. 백엔드에 계정 또는 백업이 생성된 경우 <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>로 이메일을 보내 삭제를 요청할 수 있습니다. 사용자에게는 데이터 열람, 정정, 삭제, 처리 제한, 이동을 요구할 권리와 정당한 이익에 근거한 처리에 이의를 제기할 권리가 있습니다. 감독기관에 민원을 제기할 권리도 있습니다. 폴란드에서는 개인정보보호청장(UODO)이 해당 감독기관입니다(ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl/">uodo.gov.pl</a>).</p>
+
+        <h2>15. 연락처</h2>
+        <p>개인정보 및 고객 지원 문의: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+    </section>
+
+    <section id="zh" lang="zh">
+        <h1>Bobas 隐私政策</h1>
+        <p><strong>最后更新：2026-11-20</strong></p>
+
+        <h2>1. 数据控制者</h2>
+        <p>iOS / App Store 版的数据控制者为 <strong>Maciej Siemiński</strong>。联系方式：<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>。</p>
+        <p>Google Play（Android）版的数据控制者为 <strong>LICENCEPRO POLSKA Sp. z o.o.</strong>，地址为 ul. Huculska 6, 00-730 Warszawa, 波兰。联系方式：<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>。</p>
+
+        <h2>2. 关于 Bobas</h2>
+        <p>Bobas 帮助家长和照护者安排婴儿的日常照护，包括喂养、睡眠、尿布更换、生长、用药、体温、出牙、洗澡、备注、历史记录、趋势、提醒和导出。本应用用于协助家长管理照护事项，不是诊断工具，仅面向成年人。</p>
+
+        <h2>3. 在设备本地存储的数据</h2>
+        <p>家长输入的数据保存在应用本地，主要包括：</p>
+        <ul>
+            <li>儿童档案：姓名或昵称、出生日期、性别、出生体重和身长、喂养方式及可选的观察记录。</li>
+            <li>家长档案、提醒设置和应用偏好。</li>
+            <li>照护日志条目：喂奶、吸乳、进食、睡眠、尿布更换、生长、用药、出牙、洗澡、体温和备注。</li>
+            <li>日期、标签、数量、单位、备注、历史记录、趋势、设置、初始设置进度和本地 Premium 状态。</li>
+        </ul>
+        <p>主要本地数据库使用加密的 MMKV。系统的 SecureStore / Keychain / Android Keystore 可用时，加密密钥将存放在相应的存储中。</p>
+
+        <h2>4. 备份、账户与导出</h2>
+        <p>照护数据保存在本地。你可以创建 JSON 备份、从 CSV 导入选定条目、生成 PDF 报告（Premium 功能），也可以选择配对设备，与另一位照护者同步日志，或登录并使用云备份。同步通过 Cloudflare 的基础设施传输加密数据。已配对设备持有用于读取这些数据的密钥。另一位照护者可以保留自己的副本。</p>
+        <p>新用户可以选择备份到自己的 Google Drive 私有存储空间，或在 iOS 上备份到自己的 iCloud（CloudKit）私有存储空间，Bobas 不额外收费。可用性和可能产生的存储费用取决于所选服务提供商。备份在设备上加密，但密钥存放在同一私有存储空间中，因此服务提供商在技术上可以访问备份内容。此类备份独立于 Bobas 服务器。导出的 JSON 和 PDF 报告为可读取文件，会与用户选定的接收方共享。</p>
+        <p>Bobas 服务器上的现有备份包括为兼容性保留的旧版 V1 和 V2。如使用已有备份，请妥善保管其恢复短语。登录时，应用可能向后端发送 Apple 或 Google 身份令牌，并存储用户 ID、会话令牌、过期时间、提供商及返回的电子邮件地址或 Apple Private Relay 地址。</p>
+
+        <h2>5. 通知</h2>
+        <p>应用使用本地通知提供照护提醒。你授予通知权限后，为发送可选公告，应用会向 Cloudflare Worker 注册 Expo Push 令牌、假名化安装标识符、平台、语言、应用版本、分发渠道、构建编号、所选类别和 Premium 状态。通知送达可能涉及 Expo，以及 APNs 或 Firebase Cloud Messaging。撤销权限后，当应用下次联网启动或重新进入应用时，会删除令牌注册记录。无论是否授予通知权限，应用都会发送假名化安装标识符、平台、版本、构建编号和分发渠道，以统计正在使用的应用版本。</p>
+
+        <h2>6. 崩溃诊断</h2>
+        <p>应用配置了 Sentry，用于诊断错误和崩溃。报告可能包含有关崩溃、设备、操作系统、应用版本及堆栈跟踪的技术信息。应用代码包含防护措施，以避免在诊断报告中发送家庭相关内容和用户标识符。</p>
+
+        <h2>7. 广告</h2>
+        <p>Bobas 集成了 Unity Ads，免费版可能在设置和历史记录概览等界面显示横幅广告。应用面向成年家长及照护者，未作为儿童应用或面向儿童的服务提交。应用在 Android 上声明 AD_ID 权限，并可能在 iOS 上显示平台要求的 ATT 系统授权提示。拒绝授权不会阻止使用应用。</p>
+
+        <h2>8. 应用内购买</h2>
+        <p>购买、订阅和恢复购买由 Apple App Store 或 Google Play 处理。我们不会收到完整的支付卡信息。应用可能在本地保存 Premium 状态、权益类型及到期日期。</p>
+
+        <h2>9. 儿童数据</h2>
+        <p>Bobas 面向家长和照护者。儿童相关数据由成年人输入并留在设备上，除非用户主动使用导出、家庭同步或备份功能。我们不出售儿童数据，不创建儿童账户，也不在公开的社交媒体个人资料上发布儿童数据。</p>
+
+        <h2>10. 第三方处理</h2>
+        <p>提供应用功能所需的服务商可能处理数据：Apple 和 Google 负责登录、购买和应用商店，Unity Ads 提供广告，Sentry 提供崩溃诊断，Cloudflare 提供应用基础设施，Apple 和 Google 提供所选的私有备份，Expo、APNs 和 Firebase Cloud Messaging 提供可选通知。使用这些功能时，后端在功能所需的范围内处理会话数据、加密的同步数据和加密的备份数据。</p>
+
+        <h2>11. 数据处理的法律依据（GDPR）</h2>
+        <p>在《通用数据保护条例》（GDPR）适用时，我们依据以下法律基础处理数据：</p>
+        <ul>
+            <li><strong>GDPR 第 6 条第 1 款 (b) 项（履行合同）</strong>：提供应用功能，包括本地数据、照护日志、导出、启用后的账户和备份以及购买。</li>
+            <li><strong>GDPR 第 6 条第 1 款 (a) 项（同意）</strong>：需要同意或系统权限的可选功能，例如通知。你可以随时在系统设置中撤回同意。</li>
+            <li><strong>GDPR 第 6 条第 1 款 (f) 项（合法利益）</strong>：通过崩溃诊断（Sentry）保持应用稳定，以及投放非个性化广告以支持免费版运营。</li>
+        </ul>
+
+        <h2>12. 数据保留期限</h2>
+        <p>本地数据会保存在设备上，直到在应用中删除这些数据或卸载应用。私有 Drive 或 iCloud 中数据的保留和删除取决于账户、备份功能及服务提供商的规则。删除 Bobas 账户不会自动删除此类副本。出于兼容性考虑，Bobas 服务器上的旧版 V1 备份可以与 V2 并存。V2 保留最近一代经验证的完整备份。新一代验证通过后，旧一代将被删除。如出现错误或未完成验证，旧一代可能保留至清理成功。未完成的上传会到期并被清理，发生错误时会重试。成功删除账户或完成删除请求后，账户数据和服务器备份会被删除。删除失败时需要重试。家庭同步中转存储中的加密照片在 30 天后无法访问；删除任务会按计划执行，发生错误后会重试，因此实际删除可能更晚。照护者设备上的副本各自独立。撤销通知权限后，应用下次连接 Worker 时会删除推送注册记录。非活跃的注册记录按服务设置到期。崩溃报告的保留期限取决于 Sentry 的配置，广告数据的保留期限取决于 Unity Ads 的政策。</p>
+
+        <h2>13. 跨境数据传输</h2>
+        <p>第 10 节所列服务提供商（包括 Apple、Google、Cloudflare、Sentry 和 Expo）可能在欧洲经济区以外处理技术数据。此类传输依赖 GDPR 要求的保障措施，例如欧盟委员会的标准合同条款或充分性决定（包括适用时的《欧盟—美国数据隐私框架》）。云备份在上传前于设备上加密。密钥的保管方式和服务提供商的访问能力因所选备份方式而异。</p>
+
+        <h2>14. 删除数据和用户权利</h2>
+        <p><strong><a href="delete-account/#zh">申请删除你的 Bobas 账户</a></strong>，无需登录。</p>
+        <p>你可以使用应用内功能或卸载应用来删除本地数据。退出登录将清除本地账户会话。如果后端已创建账户或备份，你可以发送邮件至 <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> 申请删除。你有权访问、更正、删除数据、限制处理和获取可携带的数据，并有权反对基于合法利益的数据处理。你也有权向监管机构投诉。在波兰，监管机构为个人数据保护办公室主席（UODO），地址为 ul. Stawki 2, 00-193 Warszawa，<a href="https://uodo.gov.pl/">uodo.gov.pl</a>。</p>
+
+        <h2>15. 联系方式</h2>
+        <p>隐私与支持：<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>。</p>
     </section>
 
     <footer>
