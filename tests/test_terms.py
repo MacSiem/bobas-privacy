@@ -42,6 +42,14 @@ class TermsTest(unittest.TestCase):
                 for term in ('CSV', 'JSON', 'PDF', 'Premium'):
                     self.assertIn(term, section['text'])
 
+    def test_all_translations_cover_trial_reference_info_and_governing_law(self):
+        parser = Terms(); parser.feed(pathlib.Path('terms/index.html').read_text(encoding='utf-8'))
+        for code, section in parser.sections.items():
+            with self.subTest(language=code):
+                for term in ('14', '30', 'Sentry', 'Apple', 'Google'):
+                    self.assertIn(term, section['text'])
+                self.assertIn('2026-11-22', section['text'])
+
     def test_privacy_and_terms_cross_links_and_backup_boundaries(self):
         policy = Terms(); policy.feed(pathlib.Path('index.html').read_text(encoding='utf-8'))
         terms = Terms(); terms.feed(pathlib.Path('terms/index.html').read_text(encoding='utf-8'))
