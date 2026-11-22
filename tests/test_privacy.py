@@ -72,7 +72,7 @@ class PrivacyTest(unittest.TestCase):
             with self.subTest(language=code):
                 intro, *chapters = locale['contents'].values()
                 self.assertIn(('h1', None), intro)
-                self.assertTrue(any('2026-11-22' in text for tag, text in intro if tag == 'text'))
+                self.assertTrue(any('2026-11-23' in text for tag, text in intro if tag == 'text'))
                 self.assertEqual(len(chapters), 15)
 
                 for number, (chapter, source_chapter) in enumerate(zip(chapters, source), start=1):
@@ -87,8 +87,8 @@ class PrivacyTest(unittest.TestCase):
                 for chapter, terms in {
                     1: ('Maciej Siemiński', 'LICENCEPRO POLSKA Sp. z o.o.'),
                     3: ('MMKV', 'SecureStore', 'Android Keystore'),
-                    4: ('JSON', 'CSV', 'PDF', 'Premium', 'Google Drive', 'iCloud', 'CloudKit', 'Apple Private Relay'),
-                    5: ('Expo Push', 'Cloudflare Worker', 'APNs', 'Firebase Cloud Messaging'),
+                    4: ('bobas://join', 'JSON', 'CSV', 'PDF', 'Premium', 'Google Drive', 'iCloud', 'CloudKit', 'Apple Private Relay'),
+                    5: ('Live Activity', 'Expo Push', 'Cloudflare Worker', 'APNs', 'Firebase Cloud Messaging'),
                     6: ('Sentry',),
                     7: ('Unity Ads', 'AD_ID', 'ATT'),
                     12: ('V1', 'V2', '30', 'Sentry', 'Unity Ads'),

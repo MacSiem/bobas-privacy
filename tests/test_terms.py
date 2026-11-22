@@ -48,7 +48,7 @@ class TermsTest(unittest.TestCase):
             with self.subTest(language=code):
                 for term in ('14', '30', 'Sentry', 'Apple', 'Google'):
                     self.assertIn(term, section['text'])
-                self.assertIn('2026-11-22', section['text'])
+                self.assertIn('2026-11-23', section['text'])
 
     def test_privacy_and_terms_cross_links_and_backup_boundaries(self):
         policy = Terms(); policy.feed(pathlib.Path('index.html').read_text(encoding='utf-8'))
