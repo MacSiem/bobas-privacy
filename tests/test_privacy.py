@@ -72,7 +72,7 @@ class PrivacyTest(unittest.TestCase):
             with self.subTest(language=code):
                 intro, *chapters = locale['contents'].values()
                 self.assertIn(('h1', None), intro)
-                self.assertTrue(any('2026-11-20' in text for tag, text in intro if tag == 'text'))
+                self.assertTrue(any('2026-11-22' in text for tag, text in intro if tag == 'text'))
                 self.assertEqual(len(chapters), 15)
 
                 for number, (chapter, source_chapter) in enumerate(zip(chapters, source), start=1):
