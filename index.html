@@ -69,8 +69,10 @@
             <li>profile dziecka: imię lub pseudonim, data urodzenia, płeć, masa i długość urodzeniowa, tryb karmienia oraz opcjonalne obserwacje,</li>
             <li>profil rodzica, ustawienia przypomnień i preferencje aplikacji,</li>
             <li>wpisy dziennika opieki: karmienie, odciąganie, jedzenie, sen, pielucha, wzrost, leki, ząbkowanie, kąpiel, temperatura i notatki,</li>
+            <li>plany leków z dawkami i godzinami, objawy, wizyty lekarskie i zalecenia oraz zapas odciągniętego mleka (ilość, miejsce przechowywania, termin i zużycie),</li>
             <li>daty, tagi, ilości, jednostki, notatki, historię, trendy, ustawienia, stan onboardingu i lokalny stan Premium.</li>
         </ul>
+        <p>Na Twoje życzenie Bobas pobiera z GitHub tabele WHO dotyczące długości ciała i obwodu głowy. GitHub otrzymuje adres IP i dane techniczne żądania. Profil dziecka i jego pomiary pozostają na urządzeniu podczas pobierania. Pobrane tabele są dostępne również offline.</p>
         <p>Główna baza lokalna używa zaszyfrowanego MMKV. Klucz szyfrowania jest przechowywany w systemowym SecureStore / Keychain / Android Keystore, gdy jest dostępny. Aparat jest używany wyłącznie do skanowania kodu QR zaproszenia do rodziny. Obraz jest przetwarzany na urządzeniu, nie jest zapisywany ani nigdzie wysyłany, a aplikacja nie robi zdjęć aparatem; zdjęcia do wpisów wybierasz wyłącznie z biblioteki zdjęć. Gdy na ekranie widoczny jest sekret (kod zaproszenia i QR, numer bezpieczeństwa, fraza odzyskiwania), aplikacja prosi system o zablokowanie zrzutów ekranu i nagrywania ekranu.</p>
 
         <h2>4. Backup, konto i eksport</h2>
@@ -136,8 +138,10 @@
             <li>baby profiles: name or nickname, date of birth, sex, birth weight and length, feeding mode and optional observations,</li>
             <li>parent profile, reminder settings and app preferences,</li>
             <li>care log entries: feeding, pumping, food, sleep, diapers, growth, medication, teething, baths, temperature and notes,</li>
+            <li>medication schedules and doses, symptoms, medical visits and recommendations, and expressed milk inventory (quantity, storage location, expiry and use),</li>
             <li>dates, tags, amounts, units, notes, history, trends, settings, onboarding state and local Premium state.</li>
         </ul>
+        <p>When you choose to download the WHO reference tables for length and head circumference, Bobas retrieves them from GitHub. GitHub receives your IP address and technical request data. Your child’s profile and measurements stay on your device during this download. The downloaded tables are available offline.</p>
         <p>The main local database uses encrypted MMKV. The encryption key is stored in the system SecureStore / Keychain / Android Keystore when available. The camera is used only to scan a family invitation QR code. The image is processed on the device, is not saved and is not sent anywhere, and the app does not take photos with the camera; photos for entries are picked only from your photo library. While a secret is shown on screen (invitation code and QR, safety number, recovery phrase), the app asks the system to block screenshots and screen recording.</p>
 
         <h2>4. Backup, account and export</h2>
@@ -203,8 +207,10 @@
             <li>Kinderprofile: Name oder Spitzname, Geburtsdatum, Geschlecht, Geburtsgewicht und -länge, Ernährungsart sowie optionale Beobachtungen.</li>
             <li>Elternprofil, Erinnerungseinstellungen und App-Präferenzen.</li>
             <li>Einträge im Pflegetagebuch: Füttern, Abpumpen, Essen, Schlaf, Windeln, Wachstum, Medikamente, Zahnen, Baden, Temperatur und Notizen.</li>
+            <li>Medikamentenpläne mit Dosis und Uhrzeit, Symptome, Arztbesuche und Empfehlungen sowie Vorräte abgepumpter Milch (Menge, Lagerort, Haltbarkeit und Verbrauch),</li>
             <li>Datumsangaben, Tags, Mengen, Einheiten, Notizen, Verlauf, Trends, Einstellungen, Stand der Ersteinrichtung und lokaler Premium-Status.</li>
         </ul>
+        <p>Auf Wunsch lädt Bobas die WHO-Referenztabellen für Körperlänge und Kopfumfang von GitHub herunter. GitHub erhält Ihre IP-Adresse und technische Daten der Anfrage. Das Profil und die Messwerte Ihres Kindes bleiben bei diesem Download auf dem Gerät. Die heruntergeladenen Tabellen sind auch offline verfügbar.</p>
         <p>Die lokale Hauptdatenbank verwendet verschlüsseltes MMKV. Der Verschlüsselungsschlüssel wird in SecureStore / Keychain / Android Keystore des Systems gespeichert, sofern verfügbar. Die Kamera wird ausschließlich zum Scannen eines QR-Codes für die Familieneinladung verwendet. Das Bild wird auf dem Gerät verarbeitet, nicht gespeichert und nirgendwohin gesendet; die App macht keine Fotos mit der Kamera, Fotos für Einträge wählst du nur aus der Fotobibliothek. Solange ein Geheimnis auf dem Bildschirm steht (Einladungscode und QR, Sicherheitsnummer, Wiederherstellungsphrase), bittet die App das System, Screenshots und Bildschirmaufnahmen zu blockieren.</p>
 
         <h2>4. Sicherung, Konto und Export</h2>
@@ -270,8 +276,10 @@
             <li>Perfiles infantiles: nombre o apodo, fecha de nacimiento, sexo, peso y longitud al nacer, tipo de alimentación y observaciones opcionales.</li>
             <li>Perfil del progenitor, ajustes de los recordatorios y preferencias de la aplicación.</li>
             <li>Entradas del diario de cuidados: tomas, extracción de leche, comidas, sueño, pañales, crecimiento, medicación, dentición, baños, temperatura y notas.</li>
+            <li>Pautas y dosis de medicación, síntomas, consultas médicas y recomendaciones, y reservas de leche extraída (cantidad, lugar de conservación, caducidad y consumo).</li>
             <li>Fechas, etiquetas, cantidades, unidades, notas, historial, tendencias, ajustes, estado de la configuración inicial y estado local de Premium.</li>
         </ul>
+        <p>Si eliges descargar las tablas de referencia de la OMS para la longitud y el perímetro cefálico, Bobas las obtiene de GitHub. GitHub recibe tu dirección IP y los datos técnicos de la solicitud. Durante la descarga, el perfil y las mediciones de tu hijo permanecen en el dispositivo. Las tablas descargadas se pueden consultar sin conexión.</p>
         <p>La base de datos local principal utiliza MMKV cifrado. La clave de cifrado se guarda en SecureStore / Keychain / Android Keystore del sistema cuando está disponible. La cámara se usa solo para escanear el código QR de una invitación familiar. La imagen se procesa en el dispositivo, no se guarda ni se envía a ningún sitio, y la app no hace fotos con la cámara; las fotos de los registros se eligen solo de tu biblioteca de fotos. Mientras hay un secreto en pantalla (código de invitación y QR, número de seguridad, frase de recuperación), la app pide al sistema que bloquee las capturas y la grabación de pantalla.</p>
 
         <h2>4. Copias de seguridad, cuenta y exportación</h2>
@@ -337,8 +345,10 @@
             <li>Profils des enfants : prénom ou pseudonyme, date de naissance, sexe, poids et taille à la naissance, mode d’alimentation et observations facultatives.</li>
             <li>Profil du parent, paramètres de rappel et préférences de l’application.</li>
             <li>Entrées du journal de soins : alimentation, tirage du lait, repas, sommeil, couches, croissance, médicaments, poussées dentaires, bains, température et notes.</li>
+            <li>Horaires et doses des médicaments, symptômes, consultations et recommandations médicales, réserves de lait tiré (quantité, lieu de conservation, péremption et utilisation).</li>
             <li>Dates, étiquettes, quantités, unités, notes, historique, tendances, paramètres, état de la configuration initiale et statut Premium local.</li>
         </ul>
+        <p>Si vous choisissez de télécharger les tables de référence de l’OMS pour la taille et le périmètre crânien, Bobas les récupère sur GitHub. GitHub reçoit votre adresse IP et les données techniques de la requête. Le profil et les mesures de votre enfant restent sur votre appareil pendant le téléchargement. Les tables téléchargées sont accessibles hors ligne.</p>
         <p>La base de données locale principale utilise MMKV chiffré. La clé de chiffrement est conservée dans le stockage système SecureStore / Keychain / Android Keystore lorsqu’il est disponible. L’appareil photo sert uniquement à scanner le code QR d’une invitation familiale. L’image est traitée sur l’appareil, n’est pas enregistrée ni envoyée ailleurs, et l’app ne prend pas de photos avec l’appareil photo ; les photos des entrées sont choisies uniquement dans votre photothèque. Tant qu’un secret est affiché à l’écran (code d’invitation et QR, numéro de sécurité, phrase de récupération), l’app demande au système de bloquer les captures et l’enregistrement d’écran.</p>
 
         <h2>4. Sauvegarde, compte et export</h2>
@@ -404,8 +414,10 @@
             <li>Profili dei bambini: nome o soprannome, data di nascita, sesso, peso e lunghezza alla nascita, modalità di alimentazione e osservazioni facoltative.</li>
             <li>Profilo del genitore, impostazioni dei promemoria e preferenze dell’app.</li>
             <li>Voci del diario di cura: poppate, estrazione del latte, pasti, sonno, pannolini, crescita, farmaci, dentizione, bagnetti, temperatura e note.</li>
+            <li>Orari e dosi dei farmaci, sintomi, visite mediche e raccomandazioni, scorte di latte estratto (quantità, luogo di conservazione, scadenza e consumo).</li>
             <li>Date, tag, quantità, unità, note, cronologia, tendenze, impostazioni, stato della configurazione iniziale e stato Premium locale.</li>
         </ul>
+        <p>Se scegli di scaricare le tabelle di riferimento dell’OMS per la lunghezza e la circonferenza cranica, Bobas le recupera da GitHub. GitHub riceve il tuo indirizzo IP e i dati tecnici della richiesta. Il profilo e le misurazioni del bambino restano sul dispositivo durante il download. Le tabelle scaricate sono disponibili offline.</p>
         <p>Il database locale principale usa MMKV cifrato. La chiave di cifratura è conservata nel sistema SecureStore / Keychain / Android Keystore, se disponibile. La fotocamera viene usata solo per scansionare il codice QR di un invito alla famiglia. L’immagine è elaborata sul dispositivo, non viene salvata né inviata altrove, e l’app non scatta foto con la fotocamera; le foto per le voci si scelgono solo dalla libreria foto. Finché sullo schermo è visibile un segreto (codice di invito e QR, numero di sicurezza, frase di recupero), l’app chiede al sistema di bloccare screenshot e registrazione dello schermo.</p>
 
         <h2>4. Backup, account ed esportazione</h2>
@@ -471,8 +483,10 @@
             <li>Perfis dos bebés: nome ou alcunha, data de nascimento, sexo, peso e comprimento à nascença, modo de alimentação e observações opcionais.</li>
             <li>Perfil do progenitor, definições de lembretes e preferências da aplicação.</li>
             <li>Registos do diário de cuidados: mamadas, extração de leite, refeições, sono, fraldas, crescimento, medicação, dentição, banhos, temperatura e notas.</li>
+            <li>Horários e doses dos medicamentos, sintomas, consultas médicas e recomendações, reservas de leite extraído (quantidade, local de conservação, validade e consumo).</li>
             <li>Datas, etiquetas, quantidades, unidades, notas, histórico, tendências, definições, estado da configuração inicial e estado local do Premium.</li>
         </ul>
+        <p>Se optar por descarregar as tabelas de referência da OMS para o comprimento e o perímetro cefálico, o Bobas obtém os ficheiros do GitHub. O GitHub recebe o seu endereço IP e os dados técnicos do pedido. Durante a transferência, o perfil e as medições da criança permanecem no dispositivo. As tabelas ficam disponíveis sem ligação à Internet.</p>
         <p>A base de dados local principal usa MMKV cifrado. A chave de cifragem é guardada no SecureStore / Keychain / Android Keystore do sistema quando disponível. A câmera é usada somente para ler o código QR de um convite da família. A imagem é processada no dispositivo, não é salva nem enviada a lugar nenhum, e o app não tira fotos com a câmera; as fotos dos registros são escolhidas somente na sua biblioteca de fotos. Enquanto um segredo aparece na tela (código de convite e QR, número de segurança, frase de recuperação), o app pede ao sistema que bloqueie capturas e gravação de tela.</p>
 
         <h2>4. Cópias de segurança, conta e exportação</h2>
@@ -538,8 +552,10 @@
             <li>Профілі дітей: ім’я або псевдонім, дата народження, стать, вага та довжина тіла при народженні, спосіб годування й необов’язкові спостереження.</li>
             <li>Профіль одного з батьків, налаштування нагадувань і параметри застосунку.</li>
             <li>Записи в щоденнику догляду: годування, зціджування молока, їжа, сон, підгузки, ріст, ліки, прорізування зубів, купання, температура й нотатки.</li>
+            <li>Графік і дози ліків, симптоми, візити до лікаря та рекомендації, запаси зцідженого молока (кількість, місце зберігання, термін придатності й використання).</li>
             <li>Дати, мітки, кількість, одиниці вимірювання, нотатки, історія, динаміка, налаштування, стан початкового налаштування та локальний статус Premium.</li>
         </ul>
+        <p>За вашим вибором Bobas завантажує з GitHub довідкові таблиці ВООЗ для довжини тіла й окружності голови. GitHub отримує вашу IP-адресу й технічні дані запиту. Під час завантаження профіль і вимірювання дитини залишаються на пристрої. Завантажені таблиці доступні без інтернету.</p>
         <p>В основній локальній базі даних використовується зашифроване сховище MMKV. Ключ шифрування зберігається в системному SecureStore / Keychain / Android Keystore за наявності. Камера використовується лише для сканування QR-коду запрошення до родини. Зображення обробляється на пристрої, не зберігається й нікуди не надсилається, а застосунок не робить фотографій камерою; фото до записів обираються лише з бібліотеки фото. Поки на екрані показано секрет (код запрошення та QR, номер безпеки, фраза відновлення), застосунок просить систему заблокувати знімки екрана й запис екрана.</p>
 
         <h2>4. Резервні копії, обліковий запис та експорт</h2>
@@ -605,8 +621,10 @@
             <li>子どものプロフィール：名前またはニックネーム、生年月日、性別、出生時の体重と身長、授乳方法、任意の観察記録。</li>
             <li>保護者のプロフィール、リマインダーの設定、アプリの環境設定。</li>
             <li>ケア日誌の記録：授乳、搾乳、食事、睡眠、おむつ、成長、投薬、歯の生え始め、入浴、体温、メモ。</li>
+            <li>薬の服用時刻と用量、症状、受診記録と医師からの助言、搾乳した母乳の在庫（量、保管場所、使用期限、使用記録）。</li>
             <li>日付、タグ、量、単位、メモ、履歴、傾向、設定、初期設定の進行状況、端末内の Premium の状態。</li>
         </ul>
+        <p>希望する場合は、身長・頭囲のWHO基準表をGitHubからダウンロードできます。GitHubにはIPアドレスとリクエストに関する技術情報が送信されます。ダウンロード時、お子さまのプロフィールと測定値は端末内に保持されます。取得した基準表はオフラインでも参照できます。</p>
         <p>主なローカルデータベースには暗号化した MMKV を使用します。利用できる場合は、暗号鍵をシステムの SecureStore / Keychain / Android Keystore に保存します。カメラは家族への招待QRコードの読み取りにのみ使用します。画像は端末上で処理され、保存も送信もされません。アプリがカメラで写真を撮ることはなく、記録用の写真は写真ライブラリからのみ選択します。招待コードとQR、安全番号、復元フレーズなどの秘密情報を表示している間、アプリはスクリーンショットと画面録画をブロックするようシステムに要求します。</p>
 
         <h2>4. バックアップ、アカウント、書き出し</h2>
@@ -672,8 +690,10 @@
             <li>아이 프로필: 이름 또는 별명, 생년월일, 성별, 출생 체중과 신장, 수유 방식, 선택적으로 입력한 관찰 사항.</li>
             <li>부모 프로필, 알림 설정, 앱 환경설정.</li>
             <li>돌봄 일지 기록: 수유, 유축, 식사, 수면, 기저귀, 성장, 투약, 이가 나는 시기, 목욕, 체온, 메모.</li>
+            <li>투약 일정과 용량, 증상, 진료 기록과 권고 사항, 유축한 모유의 재고(양, 보관 장소, 사용 기한, 사용 기록).</li>
             <li>날짜, 태그, 수량, 단위, 메모, 기록, 추이, 설정, 초기 설정 진행 상태 및 기기 내 Premium 상태.</li>
         </ul>
+        <p>원하는 경우 GitHub에서 WHO 신장 및 머리둘레 기준표를 내려받을 수 있습니다. 이때 GitHub는 IP 주소와 요청에 관한 기술 정보를 받습니다. 다운로드하는 동안 아이의 프로필과 측정값은 기기에 남습니다. 내려받은 표는 오프라인에서도 볼 수 있습니다.</p>
         <p>기본 로컬 데이터베이스는 암호화된 MMKV를 사용합니다. 암호화 키는 사용할 수 있는 경우 시스템의 SecureStore / Keychain / Android Keystore에 저장됩니다. 카메라는 가족 초대 QR 코드를 스캔하는 데에만 사용합니다. 이미지는 기기에서 처리되며 저장되거나 어디로도 전송되지 않고, 앱은 카메라로 사진을 촬영하지 않습니다. 기록에 넣는 사진은 사진 보관함에서만 선택합니다. 화면에 비밀 정보(초대 코드와 QR, 안전 번호, 복구 문구)가 표시되는 동안 앱은 시스템에 스크린샷과 화면 녹화를 차단하도록 요청합니다.</p>
 
         <h2>4. 백업, 계정 및 내보내기</h2>
@@ -739,8 +759,10 @@
             <li>儿童档案：姓名或昵称、出生日期、性别、出生体重和身长、喂养方式及可选的观察记录。</li>
             <li>家长档案、提醒设置和应用偏好。</li>
             <li>照护日志条目：喂奶、吸乳、进食、睡眠、尿布更换、生长、用药、出牙、洗澡、体温和备注。</li>
+            <li>用药时间和剂量、症状、就诊记录和医嘱，以及吸出母乳的库存（数量、存放位置、使用期限和使用记录）。</li>
             <li>日期、标签、数量、单位、备注、历史记录、趋势、设置、初始设置进度和本地 Premium 状态。</li>
         </ul>
+        <p>您可以选择从 GitHub 下载世界卫生组织的身长和头围参考表。GitHub 会收到您的 IP 地址和请求的技术信息。下载时，孩子的个人资料和测量数据保留在设备上。下载后的参考表可离线使用。</p>
         <p>主要本地数据库使用加密的 MMKV。系统的 SecureStore / Keychain / Android Keystore 可用时，加密密钥将存放在相应的存储中。相机仅用于扫描家庭邀请二维码。图像在设备上处理，不会被保存，也不会发送到任何地方；应用不会用相机拍照，记录中的照片只能从照片图库中选择。当屏幕上显示机密信息（邀请码和二维码、安全号码、恢复短语）时，应用会请求系统阻止截屏和录屏。</p>
 
         <h2>4. 备份、账户与导出</h2>
