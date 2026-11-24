@@ -33,9 +33,10 @@
             h1 { font-size: 2em; }
             table { font-size: 0.88em; }
         }
-    </style>
+    .skip-link{position:absolute;left:-10000px;top:0;z-index:1000;padding:8px 12px;background:#fff;color:#115e59}.skip-link:focus{left:8px;top:8px;outline:3px solid #115e59;outline-offset:2px}a:focus-visible{outline:3px solid #115e59;outline-offset:2px}</style>
 </head>
 <body>
+<a class="skip-link" href="#pl"><span lang="pl">Przejdź do treści</span> / <span lang="en">Skip to content</span></a>
 <div class="container">
     <nav class="lang-switcher" aria-label="Język / Language">
         <a href="#pl" lang="pl">Polski</a>
@@ -52,7 +53,8 @@
         <a href="delete-account/"><span lang="pl">Usunięcie konta</span> / <span lang="en">Delete account</span></a>
     </nav>
 
-    <section id="pl" lang="pl">
+    <main>
+    <section id="pl" lang="pl" tabindex="-1">
         <h1>Polityka prywatności - Bobas</h1>
         <p><strong>Ostatnia aktualizacja / Last updated: 2026-11-23</strong></p>
 
@@ -844,6 +846,7 @@
         <p>隐私与支持：<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>。</p>
     </section>
 
+    </main>
     <footer>
         <p>
             <a href="https://macsiem.dev/">MacSiem.dev</a><br>
